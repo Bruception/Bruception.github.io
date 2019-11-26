@@ -1,0 +1,55 @@
+
+body {
+  background-color: #e8f1f5;
+}
+
+#title {
+  background-color: #004a7c;
+  color: #e8f1f5;
+}
+
+.intro {
+  padding: 5%;
+  padding-bottom: 2%;
+  text-align: center;
+}
+
+.intro img {
+  border-radius: 100%;
+  border: 6px solid #134571;
+}
+
+.intro h1{
+  font-size: 4rem;
+  margin-bottom: 2rem;
+}
+
+.intro p {
+  font-size: 1rem;
+  color: #c6e0e3;
+  padding: 5% 15%;
+  padding-bottom: 2%;
+}
+
+.school-link {
+  font-weight: bold;
+  color: #e8f1f5;
+}
+
+.school-link:hover {
+  text-decoration: none;
+  color: #d8d8d8;
+}
+
+.icos {
+  margin: 4%;
+}
+
+.ico-link {
+  margin: 0 8px;
+  color: #e8f1f5;
+}
+
+.ico-link:hover {
+  color: #d8d8d8;
+}
