@@ -1,46 +1,44 @@
 
 body {
   background-color: #e8f1f5;
+  text-align: center;
 }
 
+
+/* Title Section */
 #title {
   background-color: #004a7c;
   color: #e8f1f5;
 }
-
 .intro {
   padding: 5%;
   padding-bottom: 2%;
   text-align: center;
 }
-
 .intro img {
   border-radius: 100%;
-  border: 6px solid #134571;
+  border: 3px solid #e8f1f5;
 }
-
-.intro h1{
+.intro h1 {
   font-size: 4rem;
   margin-bottom: 2rem;
 }
-
 .intro p {
   font-size: 1rem;
   color: #c6e0e3;
-  padding: 5% 15%;
-  padding-bottom: 2%;
+  padding-top: 6%;
+  padding-left: 15%;
+  padding-right: 15%;
+  padding-bottom: 6%;
 }
-
 .school-link {
   font-weight: bold;
   color: #e8f1f5;
 }
-
 .school-link:hover {
   text-decoration: none;
   color: #d8d8d8;
 }
-
 .icos {
   margin: 4%;
 }
@@ -52,4 +50,59 @@ body {
 
 .ico-link:hover {
   color: #d8d8d8;
+}
+
+
+/* Projects Section */
+
+.projects-div {
+  padding: 4% 15%;
+}
+
+
+.projects-div h1 {
+  color: #004a7c;
+  font-size: 3.5rem;
+  padding: 0 25%;
+  margin-bottom: 6%;
+}
+
+.project {
+  margin-top: 4%;
+  margin-bottom: 4%;
+  text-align: left;
+}
+
+.project h2 {
+  color: #444444;
+  margin-bottom: 6%;
+}
+
+.project p {
+  font-size: 0.9rem;
+  color: #888888;
+}
+
+.project a {
+  color: #444444;
+}
+
+.project h3 {
+  font-size: 1.25rem;
+  color: #666666;
+}
+
+.project h4 {
+  font-size: .8rem;
+  margin-bottom: 4%;
+  color: #e8f1f5;
+}
+
+.project a:hover {
+  color: #777777;
+}
+
+.skill {
+  background-color: #004a7c;
+  padding: 2%;
 }
