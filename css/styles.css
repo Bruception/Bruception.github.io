@@ -81,9 +81,17 @@ body {
   margin-bottom: 6%;
 }
 
-.project p {
+.project ul {
+  list-style-type: none;
+  padding-left: 0;
   font-size: 0.9rem;
   color: #888888;
+}
+
+.project li:before {
+  content:'\2022' ' ';
+  font-size: 1.25rem;
+  color: #666666;
 }
 
 .project a {
