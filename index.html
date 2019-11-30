@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-<!-- Command + / -->
 
 <head>
   <meta charset="utf-8">
@@ -8,83 +7,49 @@
   <title>Bruce Berrios</title>
   <!-- Boostrap Styles -->
   <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <!-- Custom Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Alatsi|Montserrat:600&display=swap" rel="stylesheet">
   <!-- Custom Styles -->
-  <link  href="css/styles.css" rel="stylesheet">
+  <link href="css/styles.css" rel="stylesheet">
   <!-- Bootstrap scripts -->
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
 </head>
 
 <body>
-  <section id="title">
-    <div class="container-fluid">
-      <!-- Title -->
-      <div class="intro">
-        <h1>Bruce Berrios</h1>
-        <img class="img-fluid shadow-lg" src="images/bruce.jpg" alt="Picture of Bruce Berrios">
-        <p>
-          I am a computer science student at <a class="school-link" href="https://www.fiu.edu/">FIU.</a>
-          <br/>
-          I am passionate about software engineering and I love solving problems.
-        </p>
-        <button class="btn btn-lg btn-light" type="button" style="color:#004a7c; font-weight:bold;">View Resume</button>
-        <div class="icos">
-          <a class="ico-link" href="https://www.linkedin.com/in/bruce-berrios-015582197/"><span class="fab fa-linkedin fa-2x"></span></a>
-          <a class="ico-link" href="https://github.com/Bruception"><span class="fab fa-github-square fa-2x"></span></a>
-        </div>
+  <section id="intro">
+    <div class="container-fluid intro-div">
+      <h1 class="name">Bruce Berrios</h1>
+      <img class="img-fluid shadow-lg profile-pic" src="images/bruce.jpg" alt="Picture of Bruce Berrios">
+      <p class="statement">
+        I am a computer science student at <a class="school-link" href="https://www.fiu.edu/">FIU.</a>
+        <br />
+        I am passionate about software engineering and I love solving problems.
+      </p>
+      <button class="btn btn-lg btn-light resume" type="button">View Resume</button>
+      <div class="icons">
+        <a class="icon-link" href="https://www.linkedin.com/in/bruce-berrios-015582197/"><span class="fab fa-linkedin fa-2x"></span></a>
+        <a class="icon-link" href="https://github.com/Bruception"><span class="fab fa-github-square fa-2x"></span></a>
       </div>
     </div>
   </section>
 
   <section id="projects">
-    <div class="container-fluid">
-      <div class="projects-div">
-        <h1>Projects</h1>
-        <div class="row">
-          <div class="project col-lg-4 col-md-6">
-            <h2>Handwritten Digit Recognition</h2>
-            <h3>Machine Learning</h3>
-            <ul>
-              <li>Built a simple MLP from scratch to recognize handwritten digits.</li>
-              <li>Used LÖVE2D to visualize the MLP.</li>
-            </ul>
-            <h4><span class="skill rounded">Lua</span> <span class="skill rounded">LÖVE2D</span></h4>
-            <a class="project-git" href="https://github.com/Bruception/DigitRecognitionLOVE"><span class="fab fa-github-square fa-2x"></span></a>
-          </div>
-          <div class="project col-lg-4 col-md-6">
-            <h2>Project Name</h2>
-            <h3>Project Type</h3>
-            <ul>
-              <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
-              <li>Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</li>
-            </ul>
-            <h4><span class="skill rounded">HTML</span> <span class="skill rounded">CSS</span> <span class="skill rounded">JavaScript</span></h4>
-            <a class="project-git" href="https://github.com/Bruception"><span class="fab fa-github-square fa-2x"></span></a>
-          </div>
-          <div class="project col-lg-4 col-md-6">
-            <h2>Project Name</h2>
-            <h3>Project Type</h3>
-            <ul>
-              <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
-              <li>Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</li>
-            </ul>
-            <h4><span class="skill rounded">HTML</span> <span class="skill rounded">CSS</span> <span class="skill rounded">JavaScript</span></h4>
-            <a class="project-git" href="https://github.com/Bruception"><span class="fab fa-github-square fa-2x"></span></a>
-          </div>
-          <div class="project col-lg-4 col-md-6">
-            <h2>Project Name</h2>
-            <h3>Project Type</h3>
-            <ul>
-              <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
-              <li>Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</li>
-            </ul>
-            <h4><span class="skill rounded">HTML</span> <span class="skill rounded">CSS</span> <span class="skill rounded">JavaScript</span></h4>
-            <a class="project-git" href="https://github.com/Bruception"><span class="fab fa-github-square fa-2x"></span></a>
-          </div>
+    <div class="container-fluid projects-div">
+      <h1 class="projects-title">Projects</h1>
+      <div class="row">
+        <div class="project col-lg-4 col-md-6">
+          <h2 class="project-name">Handwritten Digit Recognition</h2>
+          <h3 class="project-type">Machine Learning</h3>
+          <ul class="project-detail">
+            <li class="detail-item">Built a simple neural network from scratch to recognize handwritten digits.</li>
+            <li class="detail-item">Used LÖVE2D to visualize the neural network.</li>
+          </ul>
+          <h4 class="project-skills"><span class="skill rounded">Lua</span> <span class="skill rounded">LÖVE2D</span></h4>
+          <a class="project-git" href="https://github.com/Bruception/DigitRecognitionLOVE"><span class="fab fa-github-square fa-2x"></span></a>
         </div>
       </div>
     </div>
