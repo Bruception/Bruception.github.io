@@ -83,6 +83,7 @@ h1 {
 }
 
 .projects-title {
+  text-align: left;
   color: #004a7c;
   font-size: 3rem;
   padding: 0 0;
@@ -147,16 +148,11 @@ h1 {
     position: static;
     height: auto;
   }
-
   .name {
     font-size: 4rem;
   }
 
   .statement {
     font-size: 1rem;
-  }
-
-  .projects-title {
-    text-align: left;
   }
 }
