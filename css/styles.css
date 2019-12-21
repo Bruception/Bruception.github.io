@@ -56,6 +56,7 @@ h1 {
 
 .resume {
   color: #004a7c;
+  display: inline-block;
   font-weight: bold;
 }
 
