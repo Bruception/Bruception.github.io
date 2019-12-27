@@ -8,72 +8,61 @@
   <!-- Boostrap Styles -->
   <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <!-- Custom Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Alatsi|Montserrat:600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600&display=swap" rel="stylesheet">
   <!-- Custom Styles -->
   <link href="css/styles.css" rel="stylesheet">
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
 </head>
-
 <body>
-  <div class="container-fluid">
-    <div class="row">
-        <div class="col-lg-3 col-sm-12 px-0 sidebar">
-          <section id="intro">
-          <div class="intro-div">
-            <h1 class="name">Bruce Berrios</h1>
-            <img class="img-fluid shadow-lg profile-pic" src="images/bruce.jpg" alt="Picture of Bruce Berrios">
-            <p class="statement">
-              I am a computer science student at <a class="school-link" href="https://www.fiu.edu/">FIU.</a>
-              <br />
-              I am passionate about software engineering and I love solving problems.
-            </p>
-            <a class="btn btn-lg btn-light resume" href="docs/Resume.pdf" target="_blank">View Resume</a>
-            <div class="icons">
-              <a class="icon-link" href="https://www.linkedin.com/in/bruce-berrios-015582197/"><span class="fab fa-linkedin fa-2x"></span></a>
-              <a class="icon-link" href="https://github.com/Bruception"><span class="fab fa-github-square fa-2x"></span></a>
-            </div>
-          </div>
-          </section>
-        </div>
-        <div class="col-lg-9 offset-lg-3 col-sm-12">
-          <section id="projects">
-          <div class="container-fluid projects-div">
-            <h1 class="projects-title">Projects</h1>
-            <div class="row">
-              <div class="project col-lg-6 col-md-6">
-                <h2 class="project-name">Handwritten Digit Classifier</h2>
-                <h3 class="project-type">Machine Learning</h3>
-                <ul class="project-detail">
-                  <li class="detail-item">Built a neural network from scratch to classify handwritten digits from the MNIST dataset.</li>
-                  <li class="detail-item">Used LÖVE2D to visualize the neural network.</li>
-                </ul>
-                <h4 class="project-skills"><span class="skill rounded">Lua</span> <span class="skill rounded">LÖVE2D</span></h4>
-                <a class="project-link" href="https://github.com/Bruception/DigitRecognitionLOVE"><span class="fab fa-github-square fa-2x"></span></a>
-              </div>
-              <div class="project col-lg-6 col-md-6">
-                <h2 class="project-name">Pathfinding Visualizer</h2>
-                <h3 class="project-type">Web Application</h3>
-                <ul class="project-detail">
-                  <li class="detail-item">Built a web app that lets users visualize common pathfinding algorithms.</li>
-                  <li class="detail-item">Users can manipulate a grid and compare these algorithms.</li>
-                </ul>
-                <h4 class="project-skills"><span class="skill rounded">JavaScript</span> <span class="skill rounded">HTML</span> <span class="skill rounded">CSS</span></h4>
-                <a class="project-link" href="https://github.com/Bruception/PathfindingVisualizer"><span class="fab fa-github-square fa-2x"></span></a>
-                <a class="project-link" href="http://www.bruceberrios.me/PathfindingVisualizer/"><span class="fas fa-play-circle fa-2x"></span></a>
-              </div>
-            </div>
-          </div>
-          </section>
-        </div>
-
+  <div id="intro">
+    <div id="intro-info">
+      <img class="head-shot" src="images/bruce.jpg" alt="Bruce's photo">
+      <h1 class="name">Bruce Berrios</h1>
+      <h6 class="bio">Student and aspiring software developer.</h6>
+      <a class="resume-btn" href="docs/Resume.pdf">View Resume</a>
+      <div class="link">
+        <a class="link-icon fab fa-github fa-lg" href="https://github.com/Bruception"></a>
+        <a class="link-icon fab fa-linkedin-in fa-lg" href="https://www.linkedin.com/in/bruce-berrios-015582197/"></a>
+      </div>
     </div>
   </div>
-
-  <!-- Bootstrap scripts -->
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <div id="projects">
+    <div id="projects-info">
+      <h1 class="projects-title">Projects</h1>
+      <div class="row">
+        <div class="project col-lg-6 col-md-6">
+          <h2 class="project-name">Handwritten Digit Classifier</h2>
+          <h3 class="project-type">Machine Learning</h3>
+          <ul class="project-detail">
+            <li class="detail-item">Built a neural network from scratch to classify handwritten digits from the MNIST dataset.</li>
+            <li class="detail-item">Used LÖVE2D to visualize the neural network.</li>
+          </ul>
+          <h4 class="project-skills"><span class="skill rounded">Lua</span> <span class="skill rounded">LÖVE2D</span></h4>
+          <div class="link">
+            <a class="project-link-icon fab fa-github fa-2x" href="https://github.com/Bruception/DigitRecognitionLOVE"></a>
+          </div>
+        </div>
+        <div class="project col-lg-6 col-md-6">
+          <h2 class="project-name">Pathfinding Visualizer</h2>
+          <h3 class="project-type">Web Application</h3>
+          <ul class="project-detail">
+            <li class="detail-item">Built a web app that lets users visualize common pathfinding algorithms.</li>
+            <li class="detail-item">Users can manipulate a grid and compare these algorithms.</li>
+          </ul>
+          <h4 class="project-skills"><span class="skill rounded">JavaScript</span> <span class="skill rounded">HTML</span> <span class="skill rounded">CSS</span></h4>
+          <div class="link">
+            <a class="project-link-icon fab fa-github fa-2x" href="https://github.com/Bruception/PathfindingVisualizer"></a>
+            <a class="project-link-icon fas fa-play-circle fa-2x" href="https://www.bruceberrios.me/PathfindingVisualizer/"></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Bootstrap scripts -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 </body>
-
 </html>
