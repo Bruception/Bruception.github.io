@@ -1,111 +1,87 @@
-
 body {
   margin: 0;
   font-family: 'Montserrat', sans-serif;
   text-align: center;
+  color: #fff;
 }
 
 /* Intro Section */
 #intro {
-  background-image: linear-gradient(45deg, #004a7c, #095284, #135b8d, #1b6395, #226c9e);
-  position: fixed;
-  width: 30%;
-  height: 100%;
+  position: relative;
+  background-image: linear-gradient(45deg, #36D1DC, #5B86E5);
+  padding-top: 125px;
+  width: 100%;
 }
 
-#intro-info {
-  margin-left: auto;
-  margin-right: auto;
-  position: relative;
-  top: 50%;
-  -o-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  -moz-transform: translateY(-50%);
-  -webkit-transform: translateY(-50%);
-  transform: translateY(-50%);
+.fade-in {
+  animation: 1s 0.25s fade backwards ease-out;
+}
+
+.fade-in-after {
+  animation: 1s 0.5s fade backwards ease-in-out;
 }
 
 .head-shot {
   border-radius: 100%;
   margin-bottom: 2rem;
   width: 175px;
-  border: 3px solid #f8f9fa;
+  border: 3px solid #fff;
 }
 
 .name {
   margin-top: 0;
   margin-bottom: 2rem;
-  color: #fff;
   padding-left: 12px;
   padding-right: 12px;
   font-size: 3rem;
   font-weight: 600;
 }
 
-.bio {
-  margin-left: auto;
-  margin-right: auto;
-  width: 50%;
-  color: #eeeeee;
-  margin-bottom: 1rem;
-}
-
 .resume-btn {
   text-decoration: none;
-  color: #004a7c;
   font-weight: 600;
   display: inline-block;
-  padding: 10px 36px;
-  margin: 24px;
+  margin: 40px;
   background-color: #fff;
   transition-duration: 0.2s;
+}
+
+.resume-btn-text {
+  padding: 10px 36px;
+  width: 100%;
+  display: block;
+  background: -webkit-linear-gradient(45deg, #5B86E5, #36D1DC);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.resume-btn-text:hover {
+  background: -webkit-linear-gradient(45deg, #36D1DC, #5B86E5);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .resume-btn:hover {
   text-decoration: none;
   background-color: #eeeeee;
-  color: #004a7c;
-}
-
-.link {
-  padding-bottom: 63px;
-}
-
-.link-icon {
-  text-decoration: none;
-  color: #fff;
-  margin: auto 8px;
-  transition: 0.2s;
-}
-
-.link-icon:hover {
-  text-decoration: none;
-  cursor: pointer;
-  animation-name: lerp-color;
-  animation-duration: 1s;
-  color: #eeeeee;
 }
 
 /* Projects Section */
-
 #projects {
-  text-align: left;
-  margin-left: 50%;
-  width: 70%;
-  right: 0;
-  position: absolute;
-  height: 100%;
+  position: static;
+  width: 100%;
+  margin: auto;
 }
 
 #projects-info {
   margin-top: 63px;
-  padding-left: 15%;
-  padding-right: 15%;
+  padding-left: 8%;
+  padding-right: 8%;
 }
 
 .projects-title {
-  text-align: left;
-  color: #226c9e;
+  text-align: center;
+  color: rgb(67, 182, 224);
   font-weight: 600;
   font-size: 3rem;
   padding: 0 0;
@@ -153,11 +129,10 @@ body {
 .project-skills {
   font-size: .85rem;
   margin-bottom: 1.5rem;
-  color: #f8f9fa;
 }
 
 .skill {
-  background-color: #226c9e;
+  background-color: rgb(67, 182, 224);
   font-weight: 600;
   padding: 6px 12px;
 }
@@ -176,31 +151,41 @@ body {
   transition: 0.2s;
 }
 
+/* Footer */
+#footer {
+  background: -webkit-linear-gradient(45deg, #36D1DC, #5B86E5);
+}
 
-@media screen and (max-width: 992px) {
-  #intro {
-    padding-top: 125px;
-    position: static;
-    width: 100%;
-  }
+.footer-text {
+  font-size: 1rem;
+  padding-top: 60px;
+  padding-bottom: 24px;
+  margin-bottom: 0;
+}
 
-  #intro-info {
-    width: 100%;
-    margin-left: auto;
-    margin-right: auto;
-    position: static;
-    top: auto;
-    -o-transform: translateY(0);
-    -ms-transform: translateY(0);
-    -moz-transform: translateY(0);
-    -webkit-transform: translateY(0);
-    transform: translateY(0);
-  }
+.link {
+  padding-bottom: 44px;
+}
 
-  #projects {
-    position: static;
-    width: 100%;
-    right: auto;
-    margin-left: auto;
+.link-icon {
+  text-decoration: none;
+  color: #fff;
+  margin: auto 8px;
+  transition: 0.2s;
+}
+
+.link-icon:hover {
+  text-decoration: none;
+  cursor: pointer;
+  animation-name: lerp-color;
+  animation-duration: 1s;
+  color: #eeeeee;
+}
+
+/* Animations */
+@keyframes fade {
+  0% {
+    transform: translateY(.25em);
+    opacity: 0;
   }
 }
