@@ -81,7 +81,7 @@ body {
 
 .projects-title {
   text-align: center;
-  color: rgb(67, 182, 224);
+  color: #43b6e0;
   font-weight: 600;
   font-size: 3rem;
   padding: 0 0;
@@ -91,6 +91,7 @@ body {
 
 .project {
   text-align: left;
+  margin-bottom: 30px;
 }
 
 .project-img {
@@ -132,7 +133,7 @@ body {
 }
 
 .skill {
-  background-color: rgb(67, 182, 224);
+  background-color: #43b6e0;
   font-weight: 600;
   padding: 6px 12px;
 }
