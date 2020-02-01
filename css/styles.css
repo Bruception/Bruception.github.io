@@ -7,22 +7,9 @@ body {
 
 /* Intro Section */
 #intro {
-  background-image: linear-gradient(45deg, #004a7c, #095284, #135b8d, #1b6395, #226c9e);
-  position: fixed;
-  width: 30%;
-  height: 100%;
-}
-
-#intro-info {
-  margin-left: auto;
-  margin-right: auto;
-  position: relative;
-  top: 50%;
-  -o-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  -moz-transform: translateY(-50%);
-  -webkit-transform: translateY(-50%);
-  transform: translateY(-50%);
+  background-image: linear-gradient(45deg, #36D1DC, #5B86E5);
+  padding-top: 125px;
+  width: 100%;
 }
 
 .head-shot {
@@ -46,25 +33,38 @@ body {
   margin-left: auto;
   margin-right: auto;
   width: 50%;
-  color: #eeeeee;
+  color: #fff;
   margin-bottom: 1rem;
 }
 
 .resume-btn {
   text-decoration: none;
-  color: #004a7c;
   font-weight: 600;
   display: inline-block;
-  padding: 10px 36px;
+  /* padding: 10px 36px; */
   margin: 24px;
   background-color: #fff;
   transition-duration: 0.2s;
 }
 
+.resume-btn-text {
+  padding: 10px 36px;
+  width: 100%;
+  display: block;
+  background: -webkit-linear-gradient(45deg, #5B86E5, #36D1DC);
+ -webkit-background-clip: text;
+ -webkit-text-fill-color: transparent;
+}
+
+.resume-btn-text:hover {
+  background: -webkit-linear-gradient(45deg, #36D1DC, #5B86E5);
+ -webkit-background-clip: text;
+ -webkit-text-fill-color: transparent;
+}
+
 .resume-btn:hover {
   text-decoration: none;
   background-color: #eeeeee;
-  color: #004a7c;
 }
 
 .link {
@@ -89,23 +89,20 @@ body {
 /* Projects Section */
 
 #projects {
-  text-align: left;
-  margin-left: 50%;
-  width: 70%;
-  right: 0;
-  position: absolute;
-  height: 100%;
+  position: static;
+  width: 100%;
+  margin: auto;
 }
 
 #projects-info {
   margin-top: 63px;
-  padding-left: 15%;
-  padding-right: 15%;
+  padding-left: 8%;
+  padding-right: 8%;
 }
 
 .projects-title {
-  text-align: left;
-  color: #226c9e;
+  text-align: center;
+  color: rgb(67, 182,224);
   font-weight: 600;
   font-size: 3rem;
   padding: 0 0;
@@ -157,7 +154,7 @@ body {
 }
 
 .skill {
-  background-color: #226c9e;
+  background-color: rgb(67, 182,224);
   font-weight: 600;
   padding: 6px 12px;
 }
@@ -174,33 +171,4 @@ body {
   color: #666666;
   margin: auto 8px;
   transition: 0.2s;
-}
-
-
-@media screen and (max-width: 992px) {
-  #intro {
-    padding-top: 125px;
-    position: static;
-    width: 100%;
-  }
-
-  #intro-info {
-    width: 100%;
-    margin-left: auto;
-    margin-right: auto;
-    position: static;
-    top: auto;
-    -o-transform: translateY(0);
-    -ms-transform: translateY(0);
-    -moz-transform: translateY(0);
-    -webkit-transform: translateY(0);
-    transform: translateY(0);
-  }
-
-  #projects {
-    position: static;
-    width: 100%;
-    right: auto;
-    margin-left: auto;
-  }
 }
