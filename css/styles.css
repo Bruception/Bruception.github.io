@@ -176,8 +176,6 @@ body {
 .link-icon:hover {
   text-decoration: none;
   cursor: pointer;
-  animation-name: lerp-color;
-  animation-duration: 1s;
   color: #eeeeee;
 }
 
