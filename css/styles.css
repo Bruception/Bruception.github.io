@@ -50,15 +50,27 @@ body {
   padding: 10px 36px;
   width: 100%;
   display: block;
-  background: -webkit-linear-gradient(45deg, #5B86E5, #36D1DC);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: #43b6e0;
+  transition: all 0.2s ease-out;
 }
 
 .resume-btn-text:hover {
-  background: -webkit-linear-gradient(45deg, #36D1DC, #5B86E5);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  padding-right: 4rem;
+  transition: all 0.2s ease-out;
+}
+
+.resume-btn-text::after {
+  font-family: "Font Awesome 5 Free";
+  content: "\f30b";
+  opacity: 0;
+  position: absolute;
+  transition: all 0.2s ease-out;
+}
+
+.resume-btn-text:hover::after {
+  margin-left: 1rem;
+  opacity: 100%;
+  transition: all 0.2s ease-out;
 }
 
 .resume-btn:hover {
@@ -73,8 +85,8 @@ body {
 }
 
 #projects-container {
-  margin-top: 63px;
-  margin-bottom: 63px;
+  padding-top: 63px;
+  padding-bottom: 63px;
   padding-left: 12%;
   padding-right: 12%;
 }
