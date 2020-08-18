@@ -20,7 +20,7 @@ const projects = [
       and interact with a neural network.',
     skills: ['LÖVE2D', 'Lua'],
     links: [
-      'https://github.com/Bruception/digit-classifier-love:git',
+      'https://github.com/Bruception/digit-classifier-love',
     ],
   },
   {
@@ -31,7 +31,7 @@ const projects = [
       common pathfinding algorithms.',
     skills: ['JavaScript', 'HTML', 'CSS'],
     links: [
-      'https://github.com/Bruception/pathfinding-visualizer:git',
+      'https://github.com/Bruception/pathfinding-visualizer',
       '/pathfinding-visualizer:demo'
     ],
   },
@@ -43,7 +43,7 @@ const projects = [
       approximating bounded integrals.',
     skills: ['LÖVE2D', 'Lua'],
     links: [
-      'https://github.com/Arturoo0/GraphingCalculator:git',
+      'https://github.com/Arturoo0/GraphingCalculator',
     ],
   },
   {
@@ -55,7 +55,7 @@ const projects = [
       communities about COVID-19. Won 2nd place in PantherHacks 2020.',
     skills: ['React', 'NodeJS', 'Express', 'Firestore'],
     links: [
-      'https://github.com/FultonG/CovidSync:git',
+      'https://github.com/FultonG/CovidSync',
       'http://panthernow.com/2020/07/20/pantherhacks-2020-seeks-to-foster-innovation/:news'
     ],
   },
@@ -64,6 +64,23 @@ const projects = [
 const genericAction = (data, targetClass, parent) => {
   const targetElement = parent.querySelector(targetClass);
   targetElement.innerText = data;
+}
+
+// no colon at all, http:, https:
+const invalidColonIndices = [-1, 4, 5];
+
+const getLinkData = (link) => {
+  const iconTypeBegin = link.lastIndexOf(':');
+  const isMissingType = invalidColonIndices.includes(iconTypeBegin);
+  const url = isMissingType ? link : link.substring(0, iconTypeBegin);
+  const iconType = link.substring(iconTypeBegin + 1);
+  const selectedIconClass = iconClassMap[iconType]
+    ? iconClassMap[iconType]
+    : githubIconClassList;
+  return {
+    url,
+    iconClass: selectedIconClass,
+  };
 }
 
 const projectTemplate = {
@@ -101,14 +118,9 @@ const projectTemplate = {
       const projectLinks = parent.querySelector(targetClass);
       links.forEach(link => {
         const linkIcon = document.createElement('a');
-        const iconTypeBegin = link.lastIndexOf(':');
-        const cleanURL = link.substring(0, iconTypeBegin);
-        const iconType = link.substring(iconTypeBegin + 1);
-        const selectedClassList = iconClassMap[iconType]
-          ? iconClassMap[iconType]
-          : githubIconClassList;
-        linkIcon.classList.add(...selectedClassList);
-        linkIcon.setAttribute('href', cleanURL);
+        const { url, iconClass } = getLinkData(link);
+        linkIcon.classList.add(...iconClass);
+        linkIcon.setAttribute('href', url);
         projectLinks.appendChild(linkIcon);
       });
     },
