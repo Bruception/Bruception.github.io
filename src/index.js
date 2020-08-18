@@ -61,11 +61,6 @@ const projects = [
   },
 ];
 
-const genericAction = (data, targetClass, parent) => {
-  const targetElement = parent.querySelector(targetClass);
-  targetElement.innerText = data;
-}
-
 // no colon at all, http:, https:
 const invalidColonIndices = [-1, 4, 5];
 
@@ -83,6 +78,15 @@ const getLinkData = (link) => {
   };
 }
 
+const actionWrapper = (data, targetClass, parent, action) => {
+  const target = parent.querySelector(targetClass);
+  action(data, target);
+};
+
+const genericAction = (data, target) => {
+  target.innerText = data;
+}
+
 const projectTemplate = {
   title: {
     targetClass: '.project-name',
@@ -92,9 +96,8 @@ const projectTemplate = {
   },
   cardImage: {
     targetClass: '.card-img-top',
-    action: (data, targetClass, parent) => {
-      const cardImage = parent.querySelector(targetClass);
-      cardImage.setAttribute('src', data);
+    action: (data, target) => {
+      target.setAttribute('src', data);
     }
   },
   description: {
@@ -102,26 +105,24 @@ const projectTemplate = {
   },
   skills: {
     targetClass : '.project-skills',
-    action: (skills, targetClass, parent) => {
-      const projectSkills = parent.querySelector(targetClass);
-      skills.forEach(skill => {
+    action: (data, target) => {
+      data.forEach(skill => {
         const skillSpan = document.createElement('span');
         skillSpan.classList.add(...skillClassList);
         skillSpan.innerText = skill;
-        projectSkills.appendChild(skillSpan);
+        target.appendChild(skillSpan);
       });
     },
   },
   links: {
     targetClass: '.project-links',
-    action: (links, targetClass, parent) => {
-      const projectLinks = parent.querySelector(targetClass);
-      links.forEach(link => {
+    action: (data, target) => {
+      data.forEach(link => {
         const linkIcon = document.createElement('a');
         const { url, iconClass } = getLinkData(link);
         linkIcon.classList.add(...iconClass);
         linkIcon.setAttribute('href', url);
-        projectLinks.appendChild(linkIcon);
+        target.appendChild(linkIcon);
       });
     },
   },
@@ -147,7 +148,7 @@ const buildProjectCard = (project) => {
     if (!projectTemplate[prop]) return;
     const { targetClass, action } = projectTemplate[prop];
     const selectedAction = !!action ? action : genericAction;
-    selectedAction(project[prop], targetClass, card);
+    actionWrapper(project[prop], targetClass, card, selectedAction);
   });
   return card;
 }
