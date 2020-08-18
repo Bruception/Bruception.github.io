@@ -78,14 +78,19 @@ const getLinkData = (link) => {
   };
 }
 
-const actionWrapper = (data, targetClass, parent, action) => {
-  const target = parent.querySelector(targetClass);
-  action(data, target);
-};
-
 const genericAction = (data, target) => {
   target.innerText = data;
 }
+
+const actionWrapper = (
+  data,
+  targetClass,
+  parent,
+  action = genericAction
+) => {
+  const target = parent.querySelector(targetClass);
+  action(data, target);
+};
 
 const projectTemplate = {
   title: {
@@ -147,8 +152,7 @@ const buildProjectCard = (project) => {
   Object.keys(project).forEach(prop => {
     if (!projectTemplate[prop]) return;
     const { targetClass, action } = projectTemplate[prop];
-    const selectedAction = !!action ? action : genericAction;
-    actionWrapper(project[prop], targetClass, card, selectedAction);
+    actionWrapper(project[prop], targetClass, card, action);
   });
   return card;
 }
