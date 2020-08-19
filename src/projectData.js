@@ -62,7 +62,7 @@ const projects = [
     cardImage: 'images/covidsync.png',
     description: 'An application that integrates various APIs and services\
       to provide crucial resources for the Spanish-speaking and bilingual\
-      communities about COVID-19. <strong>Won 2nd place</strong> in PantherHacks 2020.',
+      communities about COVID-19. <strong>Won 2nd place</strong> at PantherHacks 2020.',
     skills: ['React', 'NodeJS', 'Express', 'Firestore', 'JavaScript', 'HTML', 'CSS'],
     links: [
       'https://github.com/FultonG/CovidSync',
