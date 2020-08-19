@@ -12,8 +12,8 @@ const filterProjectsBySkill = (query) => {
 const delay = (fn, ms) => {
   let timer = 0;
   return (...args) => {
-    clearTimeout(timer)
-    timer = setTimeout(fn.bind(this, ...args), ms || 0)
+    clearTimeout(timer);
+    timer = setTimeout(fn.bind(this, ...args), ms || 0);
   }
 }
 
