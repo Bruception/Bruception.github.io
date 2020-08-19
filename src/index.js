@@ -5,6 +5,6 @@ const setCopyrightText = () => {
 }
 
 window.onload = () => {
-  addProjectCards();
+  addProjectCards(projects);
   setCopyrightText();
 }

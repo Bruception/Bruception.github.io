@@ -5,7 +5,7 @@ const projects = [
     cardImage: 'images/network.png',
     description: 'A tool that lets users visualize\
       and interact with a neural network.',
-    skills: ['LÖVE2D', 'Lua'],
+    skills: ['LOVE2D', 'Lua'],
     links: [
       'https://github.com/Bruception/digit-classifier-love',
     ],
@@ -28,7 +28,7 @@ const projects = [
     cardImage: 'images/calculator.png',
     description: 'A graphing calculator capable of graphing any function and\
       approximating bounded integrals.',
-    skills: ['LÖVE2D', 'Lua'],
+    skills: ['LOVE2D', 'Lua'],
     links: [
       'https://github.com/Arturoo0/GraphingCalculator',
     ],
@@ -39,7 +39,7 @@ const projects = [
     cardImage: 'images/bitz.png',
     description: 'A puzzle game based on the Tower of Hanoi.\
       Players need to solve puzzles in the optimal number of moves.',
-    skills: ['LÖVE2D', 'Lua'],
+    skills: ['LOVE2D', 'Lua'],
     links: [
       'https://github.com/Bruception/bitz',
     ],
@@ -62,8 +62,8 @@ const projects = [
     cardImage: 'images/covidsync.png',
     description: 'An application that integrates various APIs and services\
       to provide crucial resources for the Spanish-speaking and bilingual\
-      communities about COVID-19. Won 2nd place in PantherHacks 2020.',
-    skills: ['React', 'NodeJS', 'Express', 'Firestore', 'JavaScript', 'CSS'],
+      communities about COVID-19. <strong>Won 2nd place</strong> in PantherHacks 2020.',
+    skills: ['React', 'NodeJS', 'Express', 'Firestore', 'JavaScript', 'HTML', 'CSS'],
     links: [
       'https://github.com/FultonG/CovidSync',
       'http://panthernow.com/2020/07/20/pantherhacks-2020-seeks-to-foster-innovation/:news',

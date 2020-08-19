@@ -29,7 +29,7 @@ const getLinkData = (link) => {
 }
 
 const genericAction = (data, target) => {
-  target.innerText = data;
+  target.innerHTML = data;
 }
 
 const actionWrapper = (
@@ -107,8 +107,13 @@ const buildProjectCard = (project) => {
   return card;
 }
 
-const addProjectCards = () => {
-  const projectCards = projects.map(project => buildProjectCard(project));
+const clearProjectCards = () => {
+  const row = document.querySelector('.row');
+  row.innerHTML = '';
+}
+
+const addProjectCards = (projectDataSource = projects) => {
+  const projectCards = projectDataSource.map(project => buildProjectCard(project));
   const row = document.querySelector('.row');
   projectCards.forEach(card => row.appendChild(card));
 }

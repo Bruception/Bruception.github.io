@@ -87,10 +87,43 @@ body {
 }
 
 /* Projects Section */
+#search {
+  width: 90%;
+  padding: 10px;
+  border: 1px solid #eee;
+  border-radius: 25px;
+  margin: 0 auto;
+  margin-top: 60px;
+  margin-bottom: 80px;
+}
 
-#skill-search {
-  width: 100%;
-  margin: 40px 0;
+.search-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.search-icon {
+  flex-grow: 1;
+  color: #555;
+  font-size: 1.25rem;
+  padding: 10px;
+  margin: 0 10px;
+}
+
+.search-skills {
+  flex-grow: 3;
+  width: 80%;
+  border: 0;
+  outline: none;
+  font-weight: 400;
+  font-size: 1.2rem;
+  color: #555;
+}
+
+*::placeholder {
+  font-weight: 400;
+  font-size: 1.2rem;
+  color: #888;
 }
 
 .card {
@@ -108,7 +141,7 @@ body {
   color: #43b6e0;
   font-weight: 600;
   font-size: 3rem;
-  padding: 80px 0;
+  padding-top: 80px;
 }
 
 .project {
