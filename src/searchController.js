@@ -9,11 +9,11 @@ const filterProjectsBySkill = (query) => {
   return filteredProjects.length === 0 ? projects : filteredProjects;
 }
 
-const delay = (fn, ms) => {
-  let timer = 0;
+const debounce = (func, ms = 250) => {
+  let timerID = 0;
   return (...args) => {
-    clearTimeout(timer);
-    timer = setTimeout(fn.bind(this, ...args), ms || 0);
+    clearTimeout(timerID);
+    timerID = setTimeout(func.bind(this, ...args), ms);
   }
 }
 
@@ -23,4 +23,4 @@ const searchKeyUp = (event) => {
   addProjectCards(filterProjectsBySkill(query));
 }
 
-searchInput.addEventListener('keyup', delay(searchKeyUp, 250));
+searchInput.addEventListener('keyup', debounce(searchKeyUp));
