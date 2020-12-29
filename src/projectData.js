@@ -69,4 +69,26 @@ const projects = [
       'http://panthernow.com/2020/07/20/pantherhacks-2020-seeks-to-foster-innovation/:news',
     ],
   },
+  {
+    title: 'FIU Course API',
+    subTitle: 'Web Application',
+    cardImage: 'images/json.png',
+    description: 'A web application that allows students to query courses offered at FIU.',
+    skills: ['NodeJS', 'Express', 'Jest', 'JavaScript', 'HTML', 'CSS', 'Bash', 'Python'],
+    links: [
+        'https://github.com/Bruception/fiu-course-api',
+        'https://fiu-course-api.herokuapp.com/:demo'
+    ],
+  },
+  {
+    title: 'Advent of Code 2020 Solver',
+    subTitle: 'Shell program',
+    cardImage: 'images/aoc.jpeg',
+    description: 'A shell program that allows users to get their answers\
+    for all puzzles featured in the Advent of Code 2020 event.',
+    skills: ['Bash', 'Python'],
+    links: [
+        'https://github.com/Bruception/advent-of-code-2020',
+    ],
+  },
 ];
