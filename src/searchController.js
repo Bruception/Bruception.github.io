@@ -16,7 +16,6 @@ const getProjectData = (query) => {
     const filteredProjects = query === ''
         ? projects
         : filterProjectsBySkill(normalizedQuery, matchedSkills);
-    console.log(matchedSkills);
     return {
         projects: filteredProjects.length === 0
             ? projects
