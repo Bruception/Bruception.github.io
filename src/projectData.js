@@ -42,6 +42,7 @@ const projects = [
         skills: ['LOVE2D', 'Lua'],
         links: [
             'https://github.com/Bruception/bitz',
+            'https://bitz-game.herokuapp.com/:demo',
         ],
     },
     {
