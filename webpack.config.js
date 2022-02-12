@@ -3,6 +3,7 @@ import { resolve, join, dirname } from 'path';
 import CopyPlugin from 'copy-webpack-plugin';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 import CssMinimizerPlugin from 'css-minimizer-webpack-plugin';
+import ESLintPlugin from 'eslint-webpack-plugin';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
@@ -22,6 +23,9 @@ export default {
         open: true,
     },
     plugins: [
+        new ESLintPlugin({
+            context: './src/js',
+        }),
         new CopyPlugin({
             patterns: [
                 { from: './src/static', to: './static' },

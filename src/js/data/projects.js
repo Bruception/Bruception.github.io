@@ -1,4 +1,4 @@
-const BASE_IMAGE_URL = './static/images'
+const BASE_IMAGE_URL = './static/images';
 
 const projects = [
     {
@@ -25,7 +25,7 @@ const projects = [
         links: [
             {
                 type: 'source-code',
-                uri: 'https://github.com/Bruception/pathfinding-visualizer'    
+                uri: 'https://github.com/Bruception/pathfinding-visualizer',
             },
             {
                 type: 'demo',
@@ -37,7 +37,8 @@ const projects = [
         title: 'Graphing Calculator',
         subTitle: 'Desktop Application',
         cardImage: `${BASE_IMAGE_URL}/calculator.png`,
-        description: 'A graphing calculator capable of graphing any function and\
+        description:
+            'A graphing calculator capable of graphing any function and\
       approximating bounded integrals.',
         skills: ['LOVE2D', 'Lua'],
         links: [
@@ -51,7 +52,8 @@ const projects = [
         title: 'bitz',
         subTitle: 'Mobile Game',
         cardImage: `${BASE_IMAGE_URL}/bitz.png`,
-        description: 'A puzzle game based on the Tower of Hanoi.\
+        description:
+            'A puzzle game based on the Tower of Hanoi.\
       Players need to solve puzzles in the optimal number of moves.',
         skills: ['LOVE2D', 'Lua'],
         links: [
@@ -69,13 +71,14 @@ const projects = [
         title: 'Weather Tracker',
         subTitle: 'Web Application',
         cardImage: `${BASE_IMAGE_URL}/weather.png`,
-        description: 'A web application that allows users to track the weather of various locations.\
-      Weather data is fetched from OpenWeatherMap\'s API.',
+        description:
+            "A web application that allows users to track the weather of various locations.\
+      Weather data is fetched from OpenWeatherMap's API.",
         skills: ['NodeJS', 'Express', 'JavaScript', 'HTML', 'CSS'],
         links: [
             {
                 type: 'source-code',
-                uri: 'https://github.com/Arturoo0/Weather-tracker-'
+                uri: 'https://github.com/Arturoo0/Weather-tracker-',
             },
             {
                 type: 'demo',
@@ -87,7 +90,8 @@ const projects = [
         title: 'CovidSync',
         subTitle: 'Web Application',
         cardImage: `${BASE_IMAGE_URL}/covidsync.png`,
-        description: 'An application that integrates various APIs and services\
+        description:
+            'An application that integrates various APIs and services\
       to provide crucial resources for the Spanish-speaking and bilingual\
       communities about COVID-19. <strong>Won 2nd place</strong> at PantherHacks 2020.',
         skills: ['React', 'NodeJS', 'Express', 'Firestore', 'JavaScript', 'HTML', 'CSS'],
@@ -123,7 +127,8 @@ const projects = [
         title: 'Advent of Code 2021 Solver',
         subTitle: 'Shell program',
         cardImage: `${BASE_IMAGE_URL}/aoc.jpeg`,
-        description: 'The full set of solutions for all\
+        description:
+            'The full set of solutions for all\
     puzzles featured in the Advent of Code 2021 event.',
         skills: ['Bash', 'Python'],
         links: [

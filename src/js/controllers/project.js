@@ -15,12 +15,10 @@ const ProjectController = () => {
         cardContainer.innerHTML = '';
     };
 
-    const addProjectCards = (newProjects, matchedText) => {
-        if (newProjects.length === 0) {
-            newProjects = projects;
-        }
+    const addProjectCards = (newProjects, matchedText = []) => {
+        const projectsToMap = newProjects.length === 0 ? projects : newProjects;
 
-        newProjects.map((project) => {
+        projectsToMap.map((project) => {
             cardContainer.appendChild(ProjectCard(project, matchedText));
         });
     };
@@ -33,11 +31,11 @@ const ProjectController = () => {
     };
 
     const init = () => {
-        addProjectCards(projects, []);
+        addProjectCards(projects);
         searchInput.addEventListener('keyup', debounce(searchKeyUp));
     };
 
     return init;
-}
+};
 
 export default ProjectController();

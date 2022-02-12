@@ -6,7 +6,7 @@ export const debounce = (func, ms = 250) => {
         clearTimeout(timerID);
         timerID = setTimeout(func.bind(this, ...args), ms);
     };
-}
+};
 
 export const SearchService = (data, getSearchableText) => {
     const reverseIndex = {};
@@ -69,4 +69,4 @@ export const SearchService = (data, getSearchableText) => {
     return {
         query,
     };
-}
+};
