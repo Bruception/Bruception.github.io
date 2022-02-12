@@ -1,6 +1,11 @@
 name: Deploy site
 
 on:
+  workflow_dispatch:
+    inputs:
+      reason:
+        description: 'Reason for manually triggering this workflow'
+        required: false
   push:
     branches: [ master ]
 
