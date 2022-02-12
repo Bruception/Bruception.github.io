@@ -1,13 +1,9 @@
 {
   "name": "bruception.github.io",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "My personal site.",
   "type": "module",
   "private": true,
-  "directories": {
-    "doc": "docs"
-  },
   "scripts": {
     "build:prod": "webpack --mode=production",
     "build": "webpack --mode=development",
@@ -17,7 +13,7 @@
     "type": "git",
     "url": "git+https://github.com/Bruception/Bruception.github.io.git"
   },
-  "author": "",
+  "author": "Bruce Berrios",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/Bruception/Bruception.github.io/issues"
