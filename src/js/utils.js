@@ -20,7 +20,12 @@ export const SearchService = (data, getSearchableText) => {
         const tokens = getTokens(getSearchableText(element));
         tokens.forEach((token) => {
             const normalizedToken = token.toLocaleLowerCase();
-            normalizedTokenToOriginal[normalizedToken] = token;
+
+            if (!(normalizedToken in normalizedTokenToOriginal)) {
+                normalizedTokenToOriginal[normalizedToken] = new Set();
+            }
+
+            normalizedTokenToOriginal[normalizedToken].add(token);
 
             if (!(normalizedToken in reverseIndex)) {
                 reverseIndex[normalizedToken] = new Set();
@@ -52,9 +57,11 @@ export const SearchService = (data, getSearchableText) => {
 
                 if (similarity >= 0.75 || token.startsWith(searchToken)) {
                     const matches = reverseIndex[token];
-                    matchedTokens.add(normalizedTokenToOriginal[token]);
                     matches.forEach((match) => {
                         results.add(match);
+                    });
+                    normalizedTokenToOriginal[token].forEach((originalToken) => {
+                        matchedTokens.add(originalToken);
                     });
                 }
             });

@@ -197,6 +197,10 @@ body {
     box-shadow: #fe859488 0px 1px 4px;
 }
 
+.keyword-match {
+    color: #fe8594;
+}
+
 .project-links {
     margin-bottom: 12px;
 }
