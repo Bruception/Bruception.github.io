@@ -1,36 +1,36 @@
 name: Deploy site
 
 on:
-  workflow_dispatch:
-    inputs:
-      reason:
-        description: 'Reason for manually triggering this workflow'
-        required: false
-  push:
-    branches: [ master ]
+    workflow_dispatch:
+        inputs:
+            reason:
+                description: 'Reason for manually triggering this workflow'
+                required: false
+    push:
+        branches: [master]
 
 jobs:
-  build:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout 🤗
-        uses: actions/checkout@v2
+    build:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout 🤗
+              uses: actions/checkout@v2
 
-      - name: Set up Node.js 🤔
-        uses: actions/setup-node@v1
-        with:
-          node-version: '16.13.2'
-      
-      - name: Install, Lint, and Build 🧐
-        run: |
-          npm ci
-          npm run lint
-          npm run pretty
-          npm run build:prod
-      
-      - name: Deploy 🥳
-        uses: JamesIves/github-pages-deploy-action@v4.2.3
-        with:
-          branch: gh-pages
-          folder: dist
-          commit-message: Deployed 🥳
+            - name: Set up Node.js 🤔
+              uses: actions/setup-node@v1
+              with:
+                  node-version: '16.13.2'
+
+            - name: Install, Lint, and Build 🧐
+              run: |
+                  npm ci
+                  npm run lint
+                  npm run pretty
+                  npm run build:prod
+
+            - name: Deploy 🥳
+              uses: JamesIves/github-pages-deploy-action@v4.2.3
+              with:
+                  branch: gh-pages
+                  folder: dist
+                  commit-message: Deployed 🥳

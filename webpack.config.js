@@ -9,7 +9,7 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
 export default {
-    entry: join(__dirname, './src/js/index.js'),
+    entry: join(__dirname, './src/ts/index.ts'),
     target: 'web',
     output: {
         filename: './static/js/bruception.bundle.js',
@@ -27,45 +27,47 @@ export default {
     },
     plugins: [
         new ESLintPlugin({
-            context: './src/js',
+            context: './src/ts',
         }),
         new CopyPlugin({
-            patterns: [
-                { from: './src/static', to: './static' },
-            ],
+            patterns: [{ from: './src/static', to: './static' }],
         }),
         new HtmlWebpackPlugin({
             filename: './index.html',
             template: './src/index.html',
-            templateParameters: {
-                hello: 'world',
-            },
             minify: true,
         }),
     ],
     optimization: {
-        minimizer: [
-            '...',
-            new CssMinimizerPlugin(),
-        ],
+        minimizer: ['...', new CssMinimizerPlugin()],
         minimize: true,
+    },
+    resolve: {
+        extensions: ['.ts', '.js'],
     },
     module: {
         rules: [
             {
-                test: /\.m?js$/,
+                test: /\.ts$/,
                 exclude: /node_modules/,
                 use: {
                     loader: 'babel-loader',
                     options: {
-                        presets: [
-                            ['@babel/preset-env', { targets: 'defaults' }]
-                        ]
-                    }
+                        presets: [['@babel/preset-env', { targets: 'defaults' }]],
+                    },
                 },
                 resolve: {
                     fullySpecified: false,
                 },
+            },
+            {
+                test: /\.ts$/,
+                exclude: /node_modules/,
+                use: [
+                    {
+                        loader: 'ts-loader',
+                    },
+                ],
             },
         ],
     },

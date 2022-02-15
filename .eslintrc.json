@@ -3,6 +3,8 @@
         "browser": true,
         "es6": true
     },
+    "parser": "@typescript-eslint/parser",
+    "plugins": ["@typescript-eslint"],
     "parserOptions": {
         "ecmaVersion": "latest",
         "sourceType": "module"
@@ -30,15 +32,9 @@
         "block-scoped-var": "error",
         "curly": "error",
         "default-case": "error",
-        "dot-location": [
-            "error",
-            "property"
-        ],
+        "dot-location": ["error", "property"],
         "dot-notation": "error",
-        "eqeqeq": [
-            "error",
-            "smart"
-        ],
+        "eqeqeq": ["error", "smart"],
         "no-alert": "warn",
         "no-caller": "error",
         "no-case-declarations": "error",
@@ -78,34 +74,22 @@
         "no-void": "error",
         "no-warning-comments": "warn",
         "no-with": "error",
-        "radix": [
-            "error",
-            "as-needed"
-        ],
+        "radix": ["error", "as-needed"],
         "vars-on-top": "error",
-        "wrap-iife": [
-            "error",
-            "inside"
-        ],
+        "wrap-iife": ["error", "inside"],
         "yoda": "error",
-        "strict": [
-            "error",
-            "function"
-        ],
+        "strict": ["error", "function"],
         "no-catch-shadow": "error",
         "no-delete-var": "error",
         "no-shadow-restricted-names": "error",
         "no-shadow": "error",
         "no-undef-init": "error",
-        "no-unused-vars": "error",
-        "no-use-before-define": "error",
+        "no-unused-vars": "off",
+        "no-use-before-define": "off",
         "global-require": "error",
         "handle-callback-err": "warn",
         "no-new-require": "error",
-        "block-spacing": [
-            "error",
-            "always"
-        ],
+        "block-spacing": ["error", "always"],
         "brace-style": [
             "error",
             "1tbs",
@@ -126,19 +110,10 @@
                 "after": true
             }
         ],
-        "comma-style": [
-            "error",
-            "last"
-        ],
-        "consistent-this": [
-            "error",
-            "self"
-        ],
+        "comma-style": ["error", "last"],
+        "consistent-this": ["error", "self"],
         "eol-last": "error",
-        "func-style": [
-            "error",
-            "expression"
-        ],
+        "func-style": ["error", "expression"],
         "indent": [
             "error",
             4,
@@ -176,31 +151,12 @@
             }
         ],
         "no-unneeded-ternary": "error",
-        "object-curly-spacing": [
-            "error",
-            "always"
-        ],
-        "operator-linebreak": [
-            "error",
-            "none"
-        ],
-        "quotes": [
-            "error",
-            "single",
-            "avoid-escape"
-        ],
-        "semi": [
-            "error",
-            "always"
-        ],
-        "space-before-blocks": [
-            "error",
-            "always"
-        ],
-        "space-before-function-paren": [
-            "error",
-            "never"
-        ],
+        "object-curly-spacing": ["error", "always"],
+        "operator-linebreak": ["error", "none"],
+        "quotes": ["error", "single", "avoid-escape"],
+        "semi": ["error", "always"],
+        "space-before-blocks": ["error", "always"],
+        "space-before-function-paren": ["error", "never"],
         "space-infix-ops": "error",
         "space-unary-ops": [
             "error",
@@ -209,14 +165,8 @@
                 "nonwords": false
             }
         ],
-        "spaced-comment": [
-            "error",
-            "always"
-        ],
-        "arrow-parens": [
-            "error",
-            "always"
-        ],
+        "spaced-comment": ["error", "always"],
+        "arrow-parens": ["error", "always"],
         "arrow-spacing": "error",
         "constructor-super": "error",
         "generator-star-spacing": [
@@ -235,6 +185,8 @@
         "prefer-arrow-callback": "warn",
         "prefer-spread": "warn",
         "prefer-template": "warn",
-        "require-yield": "error"
+        "require-yield": "error",
+        "@typescript-eslint/no-unused-vars": "error",
+        "@typescript-eslint/no-use-before-define": "error"
     }
 }

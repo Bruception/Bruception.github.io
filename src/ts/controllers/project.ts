@@ -1,12 +1,12 @@
-import projects from '../data/projects';
-import ProjectCard from '../components/project-card';
+import { projects } from '../data/projects';
 import { debounce, SearchService } from '../utils';
+import { ProjectCard } from '../components/project-card';
 
 const ProjectController = () => {
-    const searchInput = document.querySelector('#search');
-    const cardContainer = document.querySelector('.row');
+    const searchInput: HTMLElement = document.querySelector('#search')!;
+    const cardContainer: HTMLElement = document.querySelector('.row')!;
 
-    const searchService = SearchService(projects, (project) => {
+    const searchService = SearchService<Project>(projects, (project) => {
         const { title, subTitle, description, skills } = project;
         return `${title} ${subTitle} ${description} ${skills.join(' ')}`;
     });
@@ -15,7 +15,7 @@ const ProjectController = () => {
         cardContainer.innerHTML = '';
     };
 
-    const addProjectCards = (newProjects, matchedText = []) => {
+    const addProjectCards = (newProjects: Project[], matchedText: string[] = []) => {
         const projectsToMap = newProjects.length === 0 ? projects : newProjects;
 
         projectsToMap.map((project) => {
@@ -23,9 +23,10 @@ const ProjectController = () => {
         });
     };
 
-    const searchKeyUp = (event) => {
-        const { value: query } = event.target;
+    const searchKeyUp = (event: KeyboardEvent) => {
+        const { value: query } = event.target as HTMLInputElement;
         const { results, matchedQueryTerms } = searchService.query(query);
+
         clearProjectCards();
         addProjectCards(results, matchedQueryTerms);
     };

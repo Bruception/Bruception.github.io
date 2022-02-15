@@ -1,12 +1,12 @@
 const PROJECT_CARD_CLASS_LIST = ['col-lg-4', 'col-md-6'];
 
-const PROJECT_LINK_CLASS_MAP = {
+const PROJECT_LINK_CLASS_MAP: { [key in ValidLinkType]: string[] } = {
     'source-code': ['fab', 'fa-github'],
     demo: ['fas', 'fa-play-circle'],
     news: ['fas', 'fa-newspaper'],
 };
 
-const highlightMatches = (text, matchedText) => {
+const highlightMatches = (text: string, matchedText: string[]) => {
     const words = text.split(' ');
 
     const normalizedWords = words.map((word) => {
@@ -19,17 +19,17 @@ const highlightMatches = (text, matchedText) => {
     return normalizedWords.join(' ');
 };
 
-const ProjectLink = ({ type, uri }) => {
+const ProjectLink = ({ type, uri }: Link) => {
     const linkClasses = PROJECT_LINK_CLASS_MAP[type].join(' ');
     return `<a class="project-link-icon fa-lg ${linkClasses}" href="${uri}"></a>`;
 };
 
-const ProjectSkill = (skill, matchedText) => {
+const ProjectSkill = (skill: string, matchedText: string[]) => {
     const skillSelected = matchedText.includes(skill) && 'skill-selected';
     return `<span class="skill rounded-pill skill-normal ${skillSelected}">${skill}</span>`;
 };
 
-const ProjectCard = (projectData, matchedText) => {
+export const ProjectCard = (projectData: Project, matchedText: string[]) => {
     const { title, subTitle, cardImage, description, skills, links } = projectData;
 
     const projectSkills = skills.map((skill) => ProjectSkill(skill, matchedText));
@@ -46,11 +46,9 @@ const ProjectCard = (projectData, matchedText) => {
             </div>
         </div>`;
 
-    const projectCard = document.createElement('div');
+    const projectCard: HTMLElement = document.createElement('div');
     projectCard.classList.add(...PROJECT_CARD_CLASS_LIST);
     projectCard.innerHTML = cardTemplate;
 
     return projectCard;
 };
-
-export default ProjectCard;

@@ -1,19 +1,26 @@
 import levenshtein from 'damerau-levenshtein';
 
-export const debounce = (func, ms = 250) => {
-    let timerID = 0;
-    return (...args) => {
-        clearTimeout(timerID);
-        timerID = setTimeout(func.bind(this, ...args), ms);
-    };
-};
+interface ReverseIndex<T> {
+    [key: string]: Set<T>;
+}
 
-export const SearchService = (data, getSearchableText) => {
-    const reverseIndex = {};
-    const normalizedTokenToOriginal = {};
+interface TokenMap {
+    [key: string]: Set<string>;
+}
 
-    const getTokens = (string) => {
-        return string.match(/[a-zA-Z0-9]+/g) || [];
+interface SearchResult<T> {
+    results: T[];
+    matchedQueryTerms: string[];
+}
+
+type TextExtractor<T> = (element: T) => string;
+
+export const SearchService = <T>(data: T[], getSearchableText: TextExtractor<T>) => {
+    const reverseIndex: ReverseIndex<T> = {};
+    const normalizedTokenToOriginal: TokenMap = {};
+
+    const getTokens = (text: string) => {
+        return text.match(/[a-zA-Z0-9]+/g) || [];
     };
 
     data.forEach((element) => {
@@ -22,13 +29,13 @@ export const SearchService = (data, getSearchableText) => {
             const normalizedToken = token.toLocaleLowerCase();
 
             if (!(normalizedToken in normalizedTokenToOriginal)) {
-                normalizedTokenToOriginal[normalizedToken] = new Set();
+                normalizedTokenToOriginal[normalizedToken] = new Set<string>();
             }
 
             normalizedTokenToOriginal[normalizedToken].add(token);
 
             if (!(normalizedToken in reverseIndex)) {
-                reverseIndex[normalizedToken] = new Set();
+                reverseIndex[normalizedToken] = new Set<T>();
             }
 
             reverseIndex[normalizedToken].add(element);
@@ -37,8 +44,8 @@ export const SearchService = (data, getSearchableText) => {
 
     const tokenSet = Object.keys(reverseIndex);
 
-    const query = (searchQuery) => {
-        const searchResult = {
+    const query = (searchQuery: string) => {
+        const searchResult: SearchResult<T> = {
             results: [],
             matchedQueryTerms: [],
         };
@@ -48,8 +55,8 @@ export const SearchService = (data, getSearchableText) => {
             return searchResult;
         }
 
-        const results = new Set();
-        const matchedTokens = new Set();
+        const results = new Set<T>();
+        const matchedTokens = new Set<string>();
 
         normalizedSearchQuery.forEach((searchToken) => {
             tokenSet.forEach((token) => {
