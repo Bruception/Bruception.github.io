@@ -41,8 +41,8 @@ export const ProjectCard = (projectData: Project, matchedText: string[]) => {
                 <h2 class="project-name">${highlightMatches(title, matchedText)}</h2>
                 <h3 class="project-type">${highlightMatches(subTitle, matchedText)}</h3>
                 <p class="project-detail">${highlightMatches(description, matchedText)}</p>
-                <div class="project-skills">${projectSkills}</div>
-                <div class="project-links">${projectLinks}</div>
+                <div class="project-skills">${projectSkills.join('')}</div>
+                <div class="project-links">${projectLinks.join('')}</div>
             </div>
         </div>`;
 
