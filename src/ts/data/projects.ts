@@ -20,20 +20,10 @@ export const projects: Project[] = [
     },
     {
         title: 'FIU Course API',
-        subTitle: 'Web Application',
+        subTitle: 'Web API',
         cardImage: `${BASE_IMAGE_URL}/json.png`,
-        description: 'A web application that allows students to query courses offered at FIU.',
-        skills: [
-            'NodeJS',
-            'Express',
-            'Jest',
-            'JavaScript',
-            'HTML',
-            'CSS',
-            'Bash',
-            'Python',
-            'GraphQL',
-        ],
+        description: 'A web API that allows users to query for courses offered at FIU.',
+        skills: ['NodeJS', 'Express', 'Jest', 'JavaScript', 'HTML', 'CSS', 'Bash', 'Python', 'GraphQL'],
         links: [
             {
                 type: 'source-code',
@@ -49,8 +39,7 @@ export const projects: Project[] = [
         title: 'Advent of Code 2021 Solver',
         subTitle: 'Shell program',
         cardImage: `${BASE_IMAGE_URL}/aoc.jpeg`,
-        description:
-            'The full set of solutions for all\
+        description: 'The full set of solutions for all\
     puzzles featured in the Advent of Code 2021 event.',
         skills: ['Bash', 'Python'],
         links: [

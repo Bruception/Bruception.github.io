@@ -6,6 +6,12 @@ const PROJECT_LINK_CLASS_MAP: { [key in ValidLinkType]: string[] } = {
     news: ['fas', 'fa-newspaper'],
 };
 
+const PROJECT_LINK_DESCRIPTION: { [key in ValidLinkType]: string } = {
+    'source-code': 'See source code',
+    demo: 'See demo',
+    news: 'See news',
+};
+
 const highlightMatches = (text: string, matchedText: string[]) => {
     const words = text.split(' ');
 
@@ -21,7 +27,9 @@ const highlightMatches = (text: string, matchedText: string[]) => {
 
 const ProjectLink = ({ type, uri }: Link) => {
     const linkClasses = PROJECT_LINK_CLASS_MAP[type].join(' ');
-    return `<a class="project-link-icon fa-lg ${linkClasses}" href="${uri}"></a>`;
+    const tooltipText = PROJECT_LINK_DESCRIPTION[type];
+
+    return `<a class="project-link-icon fa-lg ${linkClasses}" href="${uri}" title="${tooltipText}"></a>`;
 };
 
 const ProjectSkill = (skill: string, matchedText: string[]) => {

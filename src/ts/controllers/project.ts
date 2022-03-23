@@ -1,12 +1,12 @@
 import { projects } from '../data/projects';
-import { debounce, SearchService } from '../utils';
+import { debounce, TextIndex } from '../utils';
 import { ProjectCard } from '../components/project-card';
 
 const ProjectController = () => {
     const searchInput: HTMLElement = document.querySelector('#search')!;
-    const cardContainer: HTMLElement = document.querySelector('.row')!;
+    const cardContainer: HTMLElement = document.querySelector('#project-cards')!;
 
-    const searchService = SearchService<Project>(projects, (project) => {
+    const projectTextIndex = TextIndex<Project>(projects, (project) => {
         const { title, subTitle, description, skills } = project;
         return `${title} ${subTitle} ${description} ${skills.join(' ')}`;
     });
@@ -25,7 +25,7 @@ const ProjectController = () => {
 
     const searchKeyUp = (event: KeyboardEvent) => {
         const { value: query } = event.target as HTMLInputElement;
-        const { results, matchedQueryTerms } = searchService.query(query);
+        const { results, matchedQueryTerms } = projectTextIndex.search(query);
 
         clearProjectCards();
         addProjectCards(results, matchedQueryTerms);

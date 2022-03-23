@@ -17,13 +17,13 @@ export default {
         clean: true,
     },
     devServer: {
-        static: resolve(__dirname, './dist'),
         compress: true,
         port: 3000,
         open: true,
         client: {
             overlay: false,
         },
+        watchFiles: ['src/**/*'],
     },
     plugins: [
         new ESLintPlugin({
