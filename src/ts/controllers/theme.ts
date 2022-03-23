@@ -1,29 +1,34 @@
-const THEME_STORAGE_KEY = 'theme-selected';
+import { Storage } from '../utils';
+
+const getThemeIcon = (theme: string) => {
+    const icon = theme === 'light' ? 'sun' : 'moon';
+    return `fas fa-${icon}`;
+};
 
 const ThemeController = () => {
     const root = document.documentElement;
     const toggleButton: HTMLInputElement = document.querySelector('#theme-toggle')!;
-    const themeText: HTMLElement = document.querySelector('#theme-text')!;
+    const themeIcon: HTMLElement = document.querySelector('#theme-icon')!;
 
     const toggleOnChange = (event: Event) => {
         const eventTarget = event.target as HTMLInputElement;
         const currentTheme = eventTarget.checked ? 'dark' : 'light';
 
         root.setAttribute('data-theme', currentTheme);
-        localStorage.setItem(THEME_STORAGE_KEY, currentTheme);
+        Storage.setTheme(currentTheme);
 
-        themeText.innerHTML = `${currentTheme} mode`;
+        themeIcon.className = getThemeIcon(currentTheme);
     };
 
     const init = () => {
-        const themeSelected = localStorage.getItem(THEME_STORAGE_KEY) ?? 'light';
+        const themeSelected = Storage.getTheme();
 
         root.setAttribute('data-theme', themeSelected);
 
         toggleButton.addEventListener('change', toggleOnChange);
         toggleButton.checked = themeSelected === 'dark';
 
-        themeText.innerHTML = `${themeSelected} mode`;
+        themeIcon.className = getThemeIcon(themeSelected);
     };
 
     return init;

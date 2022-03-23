@@ -1,4 +1,5 @@
-import { debounce } from './debounce';
-import { SearchService } from './search-service';
+import { debounce, keyBy } from './misc';
+import TextIndex from './text-index';
+import Storage from './storage';
 
-export { SearchService, debounce };
+export { TextIndex, Storage, debounce, keyBy };

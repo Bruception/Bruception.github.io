@@ -15,7 +15,7 @@ interface SearchResult<T> {
 
 type TextExtractor<T> = (element: T) => string;
 
-export const SearchService = <T>(data: T[], getSearchableText: TextExtractor<T>) => {
+const TextIndex = <T>(data: T[], getSearchableText: TextExtractor<T>) => {
     const reverseIndex: ReverseIndex<T> = {};
     const normalizedTokenToOriginal: TokenMap = {};
 
@@ -44,7 +44,7 @@ export const SearchService = <T>(data: T[], getSearchableText: TextExtractor<T>)
 
     const tokenSet = Object.keys(reverseIndex);
 
-    const query = (searchQuery: string) => {
+    const search = (searchQuery: string) => {
         const searchResult: SearchResult<T> = {
             results: [],
             matchedQueryTerms: [],
@@ -81,6 +81,8 @@ export const SearchService = <T>(data: T[], getSearchableText: TextExtractor<T>)
     };
 
     return {
-        query,
+        search,
     };
 };
+
+export default TextIndex;
