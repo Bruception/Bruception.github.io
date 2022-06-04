@@ -1,12 +1,12 @@
 :root {
     --default-text-color-main: #fff;
-    --default-text-color-secondary: #43b6e0;
+    --default-text-color-secondary: #126fd3;
 
-    --header-footer-background-image: linear-gradient(45deg, #36d1dc, #5b86e5);
-    --header-footer-background-color: none;
+    --header-footer-background-color: #126fd3;
     --resume-button-background-color: #fff;
     --resume-button-background-color-hover: #eee;
-    --resume-button-color: #43b6e0;
+    --resume-button-color: #126fd3;
+    --current-company-highlight-color-hover: #fff;
 
     --container-background-color: #fff;
     --search-border: 1px solid #eee;
@@ -14,9 +14,9 @@
 
     --card-background-color: #fff;
     --card-image-brightness: brightness(100%);
-    --project-skill-background-color: #43b6e0;
+    --project-skill-background-color: #126fd3;
     --project-skill-selected-background-color: #fff;
-    --project-skill-selected-color: #fe8594;
+    --project-skill-selected-color: #ff738f;
     --project-skill-selected-box-shadow: #fe859488 0px 1px 4px;
     --project-skill-border: solid 1px;
     --project-link-icon-color: #555;
@@ -27,9 +27,9 @@
     --text-subtitle-color: #666;
     --text-description-color: #888;
 
-    --keyword-match-color: #fe8594;
+    --keyword-match-color: #ff738f;
 
-    --experience-list-highlight-color: #43b6e0;
+    --experience-list-highlight-color: #126fd3;
 
     --organization-icon-filter: brightness(35%);
     --organization-unselected-color: #999;
@@ -39,11 +39,11 @@
     --default-text-color-main: #d2d2d2;
     --default-text-color-secondary: #aaa;
 
-    --header-footer-background-image: none;
     --header-footer-background-color: #15161b;
     --resume-button-background-color: #212227;
     --resume-button-background-color-hover: #126fd3;
     --resume-button-color: #d2d2d2;
+    --current-company-highlight-color-hover: #126fd3;
 
     --container-background-color: #191a1f;
     --search-border: solid 1px #15161b;
@@ -147,7 +147,6 @@ input:checked + .slider:before {
 }
 
 #intro {
-    background-image: var(--header-footer-background-image);
     background-color: var(--header-footer-background-color);
     padding-top: 125px;
     padding-bottom: 85px;
@@ -231,6 +230,19 @@ input:checked + .slider:before {
 .resume-btn:hover {
     text-decoration: none;
     background-color: var(--resume-button-background-color-hover);
+}
+
+.current-company {
+    text-decoration: none;
+    font-weight: bold;
+    color: inherit;
+    transition: border-bottom 80ms cubic-bezier(.01,.88,.93,.07) 0s;
+}
+
+.current-company:hover {
+    border-bottom: 3px solid var(--current-company-highlight-color-hover);
+    text-decoration: none;
+    color: #eee;
 }
 
 /* Experience Section */
@@ -459,7 +471,6 @@ section {
 /* Footer */
 
 #footer {
-    background: var(--header-footer-background-image);
     background-color: var(--header-footer-background-color);
 }
 
