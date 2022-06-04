@@ -3,10 +3,7 @@
     --default-text-color-secondary: #126fd3;
 
     --header-footer-background-color: #126fd3;
-    --resume-button-background-color: #fff;
-    --resume-button-background-color-hover: #eee;
-    --resume-button-color: #126fd3;
-    --current-company-highlight-color-hover: #fff;
+    --link-color-hover: #fff;
 
     --container-background-color: #fff;
     --search-border: 1px solid #eee;
@@ -40,10 +37,7 @@
     --default-text-color-secondary: #aaa;
 
     --header-footer-background-color: #15161b;
-    --resume-button-background-color: #212227;
-    --resume-button-background-color-hover: #126fd3;
-    --resume-button-color: #d2d2d2;
-    --current-company-highlight-color-hover: #126fd3;
+    --link-color-hover: #126fd3;
 
     --container-background-color: #191a1f;
     --search-border: solid 1px #15161b;
@@ -191,57 +185,41 @@ input:checked + .slider:before {
     font-weight: 400;
 }
 
-.resume-btn {
-    text-decoration: none;
-    font-weight: 600;
-    display: inline-block;
-    margin: 40px;
-    background-color: var(--resume-button-background-color);
-    transition-duration: 0.2s;
+.links {
+    margin: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.resume-btn-text {
-    padding: 10px 36px;
-    width: 100%;
-    display: block;
-    color: var(--resume-button-color);
-    transition: all 0.2s ease-out;
-}
-
-.resume-btn-text:hover {
-    padding-right: 4rem;
-    transition: all 0.2s ease-out;
-}
-
-.resume-btn-text::after {
-    font-family: 'Font Awesome 5 Free';
-    content: '\f30b';
-    opacity: 0;
-    position: absolute;
-    transition: all 0.2s ease-out;
-}
-
-.resume-btn-text:hover::after {
-    margin-left: 1rem;
-    opacity: 1;
-    transition: all 0.2s ease-out;
-}
-
-.resume-btn:hover {
-    text-decoration: none;
-    background-color: var(--resume-button-background-color-hover);
-}
-
-.current-company {
+.link {
     text-decoration: none;
     font-weight: bold;
     color: inherit;
-    transition: border-bottom 80ms cubic-bezier(0.01, 0.88, 0.93, 0.07) 0s;
+    padding-bottom: 0.1rem;
+    transition: box-shadow 80ms cubic-bezier(0.01, 0.88, 0.93, 0.07) 0s;
 }
 
-.current-company:hover {
-    border-bottom: 3px solid var(--current-company-highlight-color-hover);
+.link:hover {
+    box-shadow: 0 3px 0 var(--link-color-hover);
     text-decoration: none;
+    color: #eee;
+}
+
+.links .link {
+    margin: 0.5rem;
+}
+
+.link-icon {
+    text-decoration: none;
+    color: var(--default-text-color-main);
+    margin: 1rem;
+    transition: 0.2s;
+}
+
+.link-icon:hover {
+    text-decoration: none;
+    cursor: pointer;
     color: #eee;
 }
 
@@ -476,27 +454,10 @@ section {
 
 .footer-text {
     font-size: 1rem;
-    padding-top: 60px;
-    padding-bottom: 24px;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
     margin-bottom: 0;
     color: var(--default-text-color-main);
-}
-
-.link {
-    padding-bottom: 44px;
-}
-
-.link-icon {
-    text-decoration: none;
-    color: var(--default-text-color-main);
-    margin: auto 8px;
-    transition: 0.2s;
-}
-
-.link-icon:hover {
-    text-decoration: none;
-    cursor: pointer;
-    color: #eeeeee;
 }
 
 /* Animations */

@@ -15,13 +15,6 @@
         <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700&display=swap" rel="stylesheet" />
         <!-- Custom Styles -->
         <link href="./static/css/styles.css" rel="stylesheet" />
-        <!-- Font Awesome -->
-        <link
-            rel="stylesheet"
-            href="https://use.fontawesome.com/releases/v5.11.2/css/all.css"
-            integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN"
-            crossorigin="anonymous"
-        />
     </head>
     <body>
         <section id="intro">
@@ -31,11 +24,26 @@
                 </div>
                 <div class="fade-in-after">
                     <h6 class="bio">
-                        Incoming Software Engineer @ <a class="current-company" href="https://blend.com/">Blend</a>
+                        Incoming Software Engineer @ <a class="link" href="https://blend.com/">Blend</a>
                     </h6>
-                    <a class="resume-btn rounded-pill shadow" href="./static/docs/Resume.pdf">
-                        <div class="resume-btn-text">View Resume</div>
-                    </a>
+                    <div class="links">
+                        <a class="link tippyme" href="https://github.com/Bruception" tooltip-text="GitHub">
+                            <i class="link-icon fa-lg fab fa-github"></i>
+                        </a>
+                        <a
+                            class="link tippyme"
+                            href="https://www.linkedin.com/in/bruce-berrios-015582197/"
+                            tooltip-text="LinkedIn"
+                        >
+                            <i class="link-icon fa-lg fab fa-linkedin"></i>
+                        </a>
+                        <a class="link tippyme" href="./static/docs/Resume.pdf" tooltip-text="Resume">
+                            <i class="link-icon fa-lg fa-solid fa-file-lines"></i>
+                        </a>
+                        <a class="link tippyme" href="mailto:bberr022@fiu.edu" tooltip-text="E-mail">
+                            <i class="link-icon fa-lg fa-solid fa-envelope"></i>
+                        </a>
+                    </div>
                 </div>
                 <div id="theme-setting">
                     <i id="theme-icon" class="fas fa-sun"></i>
@@ -69,18 +77,14 @@
         </section>
         <footer id="footer">
             <p class="footer-text">© Bruce Berrios</p>
-            <div class="link">
-                <a class="link-icon fab fa-github fa-lg" href="https://github.com/Bruception"></a>
-                <a
-                    class="link-icon fab fa-linkedin fa-lg"
-                    href="https://www.linkedin.com/in/bruce-berrios-015582197/"
-                ></a>
-            </div>
         </footer>
         <script
             src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
             integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
             crossorigin="anonymous"
         ></script>
+        <script src="https://kit.fontawesome.com/1bcfef85a4.js" crossorigin="anonymous"></script>
+        <script src="https://unpkg.com/@popperjs/core@2"></script>
+        <script src="https://unpkg.com/tippy.js@6"></script>
     </body>
 </html>
