@@ -283,6 +283,10 @@ input:checked + .slider:before {
     margin-top: 1rem;
 }
 
+.experience-position-description li {
+    margin-bottom: 0.5rem;
+}
+
 .experience-item {
     cursor: pointer;
     display: flex;
