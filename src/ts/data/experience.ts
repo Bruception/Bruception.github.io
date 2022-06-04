@@ -8,10 +8,9 @@ export const experience: Experience[] = [
             {
                 title: 'Open Source Contributor',
                 description: [
+                    'Implemented realtime daily leaderboards, offering users an engaging and low latency experience.',
+                    'Assisted in the development of a public API. Allowing users to access their data in third-party applications via generated API keys.',
                     'Improved and expanded the existing API to follow RESTful conventions.',
-                    'Assisted in the development of a new public API. Allowing users to access their data in third-party applications.',
-                    'Developed an API to allow users to create and manage their API keys for the public API.',
-                    'Helped in the development of an API client for the public API.',
                     'Created and improved various features in the web client.',
                 ],
                 duration: {
