@@ -236,7 +236,7 @@ input:checked + .slider:before {
     text-decoration: none;
     font-weight: bold;
     color: inherit;
-    transition: border-bottom 80ms cubic-bezier(.01,.88,.93,.07) 0s;
+    transition: border-bottom 80ms cubic-bezier(0.01, 0.88, 0.93, 0.07) 0s;
 }
 
 .current-company:hover {
