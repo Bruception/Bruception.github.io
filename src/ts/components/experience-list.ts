@@ -7,7 +7,7 @@ const ExperiencePosition = (positionData: Position) => {
     const endDateString = !endDate ? 'Present' : endDate;
 
     const positionTemplate = `
-        <div class="experience-position fade-in-fast">
+        <div class="experience-position">
             <div class="experience-position-title">${title}</div>
             <div class="experience-position-duration">${startDate} - ${endDateString}</div>
             <ul class="experience-position-description">
@@ -23,41 +23,43 @@ const ExperiencePosition = (positionData: Position) => {
     return position;
 };
 
-const OrganizationFilterItem = (
+const ExperienceFilterItem = (
     organizationData: Experience['organization'],
     index: number,
     onChange: (name: string) => void,
 ) => {
     const { name, image } = organizationData;
 
-    const organizationFilterItemTemplate = `
+    const experienceFilterItemContent = `
         <img class="organization-image-icon" src="${image}" alt="organization-image">
         <div class="organization-name">${name}</div>
     `;
 
-    const organizationFilter: HTMLElement = document.createElement('div');
-    organizationFilter.classList.add('experience-item');
+    const experienceFilterItem: HTMLElement = document.createElement('div');
+    experienceFilterItem.classList.add('experience-item');
 
     if (index === 0) {
-        organizationFilter.classList.add('selected', 'shadow');
+        experienceFilterItem.classList.add('selected', 'shadow');
     }
 
-    organizationFilter.innerHTML = organizationFilterItemTemplate;
+    experienceFilterItem.innerHTML = experienceFilterItemContent;
 
-    organizationFilter.addEventListener('click', () => {
+    experienceFilterItem.addEventListener('click', (e) => {
         const selectedOrganizationFilter = document.querySelector('.experience-item.selected');
-        if (selectedOrganizationFilter === organizationFilter) {
+        if (selectedOrganizationFilter === experienceFilterItem) {
             return;
         }
 
-        selectedOrganizationFilter && selectedOrganizationFilter.classList.remove('selected', 'shadow');
+        if (selectedOrganizationFilter) {
+            selectedOrganizationFilter.classList.remove('selected', 'shadow');
+        }
 
-        organizationFilter.classList.add('selected', 'shadow');
+        experienceFilterItem.classList.add('selected', 'shadow');
 
         onChange(name);
     });
 
-    return organizationFilter;
+    return experienceFilterItem;
 };
 
 export const buildExperienceList = (experience: Experience[]) => {
@@ -77,9 +79,26 @@ export const buildExperienceList = (experience: Experience[]) => {
     };
 
     experience.forEach(({ organization }, index) => {
-        const organizationFilterItem = OrganizationFilterItem(organization, index, showRelevantPositions);
+        const organizationFilterItem = ExperienceFilterItem(organization, index, showRelevantPositions);
         experienceOrganizationFilter.appendChild(organizationFilterItem);
     });
+
+    experienceOrganizationFilter.addEventListener(
+        'click',
+        () => {
+            const selectedOrganizationFilter = document.querySelector('.experience-item.selected');
+            if (selectedOrganizationFilter) {
+                const { left, width } = selectedOrganizationFilter.getBoundingClientRect();
+                const selectedOrganizationFilterCenter = left + width / 2;
+
+                experienceOrganizationFilter.scrollBy({
+                    left: selectedOrganizationFilterCenter - window.innerWidth / 2,
+                    behavior: 'smooth',
+                });
+            }
+        },
+        false,
+    );
 
     showRelevantPositions(experience[0].organization.name);
 };

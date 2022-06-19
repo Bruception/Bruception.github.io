@@ -8,9 +8,11 @@ export const experience: Experience[] = [
             {
                 title: 'Open Source Contributor',
                 description: [
-                    'Implemented realtime daily leaderboards, offering users an engaging and low latency experience.',
+                    'Implemented configurable real-time daily leaderboards using Redis.',
                     'Assisted in the development of a public API. Allowing users to access their data in third-party applications via generated API keys.',
-                    'Improved and expanded the existing API to follow RESTful conventions.',
+                    'Overhauled and expanded the existing API to follow RESTful conventions.',
+                    'Improved web client build times by 10x by migrating from Browserify to Webpack.',
+                    'Setup a CI job on all pull requests using Github Actions to improve code stability.',
                     'Created and improved various features in the web client.',
                 ],
                 duration: {
@@ -39,10 +41,10 @@ export const experience: Experience[] = [
             {
                 title: 'Software Engineer Intern',
                 description: [
-                    'Collaborated with a full-stack engineering team in charge of developing mission-critical features that help borrowers going through the mortgage process get pre-approved faster.',
-                    'Contributed to the API of a microservice in charge of usability benchmarking for the loan application page.',
+                    'Contributed to the API of a service used for automating the setup of complex loan application scenarios. This service is used by the user research team for usability testing.',
+                    "Improved the Loan Cost Worksheet feature to meet customers' requirements. This feature details estimated closing costs for borrowers.",
                     'Experienced agile software development methodologies emphasizing continuous delivery.',
-                    'Wrote tests for all contributions and bug fixes using the unit testing framework Jest.',
+                    'Wrote unit tests for all contributions and bug fixes.',
                 ],
                 duration: {
                     startDate: 'May 2020',
