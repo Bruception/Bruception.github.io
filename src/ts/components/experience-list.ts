@@ -44,7 +44,7 @@ const ExperienceFilterItem = (
 
     experienceFilterItem.innerHTML = experienceFilterItemContent;
 
-    experienceFilterItem.addEventListener('click', (e) => {
+    experienceFilterItem.addEventListener('click', () => {
         const selectedOrganizationFilter = document.querySelector('.experience-item.selected');
         if (selectedOrganizationFilter === experienceFilterItem) {
             return;
