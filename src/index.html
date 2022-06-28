@@ -13,16 +13,19 @@
         />
         <!-- Custom Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700&display=swap" rel="stylesheet" />
+        <script>
+            document.documentElement.setAttribute('data-theme', window.localStorage.getItem('theme-selected'));
+        </script>
         <!-- Custom Styles -->
         <link href="./static/css/styles.css" rel="stylesheet" />
     </head>
     <body>
         <section id="intro">
             <div id="intro-info">
-                <div class="fade-in">
+                <div>
                     <h1 class="name">Bruce Berrios</h1>
                 </div>
-                <div class="fade-in-after">
+                <div>
                     <h6 class="bio">
                         Incoming Software Engineer @ <a class="link" href="https://blend.com/">Blend</a>
                     </h6>
@@ -57,7 +60,7 @@
         <section id="experience">
             <div id="experience-container" class="section-container">
                 <h1 id="experience-title" class="section-container-title">Experience</h1>
-                <div id="experience-panel" class="panel fade-in-after">
+                <div id="experience-panel" class="panel">
                     <div id="experience-organization-filter"></div>
                     <div id="experience-positions"></div>
                 </div>

@@ -151,18 +151,6 @@ input:checked + .slider:before {
     margin: 0 auto;
 }
 
-.fade-in {
-    animation: 1s 0.25s fade backwards ease-out;
-}
-
-.fade-in-after {
-    animation: 1s 0.5s fade backwards ease-in-out;
-}
-
-.fade-in-fast {
-    animation: 0.75s fade backwards ease-out;
-}
-
 .head-shot {
     border-radius: 100%;
     margin-bottom: 2rem;
@@ -214,13 +202,13 @@ input:checked + .slider:before {
     text-decoration: none;
     color: var(--default-text-color-main);
     margin: 1rem;
-    transition: 0.2s;
 }
 
 .link-icon:hover {
     text-decoration: none;
     cursor: pointer;
     color: #eee;
+    transition: 0.2s;
 }
 
 /* Experience Section */
@@ -294,6 +282,7 @@ input:checked + .slider:before {
 
 .organization-name {
     padding: 0 1rem;
+    max-height: 2rem;
     align-self: center;
 }
 
@@ -436,7 +425,6 @@ section {
     color: var(--project-link-icon-color);
     font-size: 10px;
     margin: auto 8px;
-    transition: 0.2s;
 }
 
 .project-link-icon:hover {
@@ -458,13 +446,4 @@ section {
     padding-bottom: 3rem;
     margin-bottom: 0;
     color: var(--default-text-color-main);
-}
-
-/* Animations */
-
-@keyframes fade {
-    0% {
-        transform: translateY(0.25em);
-        opacity: 0;
-    }
 }
