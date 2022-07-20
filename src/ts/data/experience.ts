@@ -28,6 +28,13 @@ export const experience: Experience[] = [
         },
         positions: [
             {
+                title: 'Software Engineer',
+                description: [],
+                duration: {
+                    startDate: 'July 2022',
+                },
+            },
+            {
                 title: 'Software Engineer Intern',
                 description: [
                     "Assisted in the design and development of an API that would allow clients to update details of a borrower's loan product when changes are made in an external loan origination system.",
