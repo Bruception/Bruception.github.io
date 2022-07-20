@@ -2,7 +2,9 @@ import { experience } from '../data/experience';
 import { buildExperienceList } from '../components/experience-list';
 
 const getDateTime = (date: string) => {
-    return new Date(date).getTime();
+    const [month, year] = date.split(' ');
+    // Safari does not support natural dates with no day specified :(
+    return new Date(`${month} 1 ${year}`).getTime();
 };
 
 const positionComparator = (a: Position, b: Position) => {
