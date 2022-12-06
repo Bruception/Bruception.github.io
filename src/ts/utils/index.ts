@@ -1,5 +1,3 @@
-import { debounce, keyBy } from './misc';
-import TextIndex from './text-index';
-import Storage from './storage';
+import { keyBy } from './misc';
 
-export { TextIndex, Storage, debounce, keyBy };
+export { keyBy };

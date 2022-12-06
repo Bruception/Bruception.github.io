@@ -5,7 +5,6 @@
         "module": "commonjs",
         "strict": true,
         "allowSyntheticDefaultImports": true,
-        "types": ["damerau-levenshtein"],
         "moduleResolution": "node",
         "esModuleInterop": true,
         "isolatedModules": true

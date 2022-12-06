@@ -1,38 +1,4 @@
 :root {
-    --default-text-color-main: #fff;
-    --default-text-color-secondary: #126fd3;
-
-    --header-footer-background-color: #126fd3;
-    --link-color-hover: #fff;
-
-    --container-background-color: #fff;
-    --search-border: 1px solid #eee;
-    --search-text-color: #555;
-
-    --card-background-color: #fff;
-    --card-image-brightness: brightness(100%);
-    --project-skill-background-color: #126fd3;
-    --project-skill-selected-background-color: #fff;
-    --project-skill-selected-color: #ff738f;
-    --project-skill-selected-box-shadow: #fe859488 0px 1px 4px;
-    --project-skill-border: solid 1px;
-    --project-link-icon-color: #555;
-
-    --marker-color: #666;
-
-    --text-title-color: #555;
-    --text-subtitle-color: #666;
-    --text-description-color: #888;
-
-    --keyword-match-color: #ff738f;
-
-    --experience-list-highlight-color: #126fd3;
-
-    --organization-icon-filter: brightness(35%);
-    --organization-unselected-color: #999;
-}
-
-[data-theme='dark'] {
     --default-text-color-main: #d2d2d2;
     --default-text-color-secondary: #aaa;
 
@@ -40,25 +6,12 @@
     --link-color-hover: #126fd3;
 
     --container-background-color: #191a1f;
-    --search-border: solid 1px #15161b;
-    --search-text-color: #d2d2d2;
-
-    --card-background-color: #212227;
-    --card-image-brightness: brightness(75%);
-    --project-skill-background-color: #126fd3;
-    --project-skill-selected-background-color: #ff5b8d;
-    --project-skill-selected-color: #fff;
-    --project-skill-border: none;
-    --project-skill-selected-box-shadow: none;
-    --project-link-icon-color: #999;
 
     --marker-color: #126fd3;
 
     --text-title-color: #aaa;
     --text-subtitle-color: #777;
     --text-description-color: #999;
-
-    --keyword-match-color: #ff5b8d;
 
     --experience-list-highlight-color: #126fd3;
 
@@ -74,72 +27,6 @@ body {
 }
 
 /* Intro Section */
-
-.switch {
-    position: relative;
-    display: inline-block;
-    width: 45px;
-    height: 18px;
-}
-
-.switch input {
-    opacity: 0;
-    width: 0;
-    height: 0;
-}
-
-.slider {
-    position: absolute;
-    cursor: pointer;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: #ccc;
-    -webkit-transition: 0.4s;
-    transition: 0.4s;
-}
-
-.slider:before {
-    position: absolute;
-    content: '';
-    height: 12px;
-    width: 12px;
-    left: 3px;
-    bottom: 3px;
-    background-color: #fff;
-    -webkit-transition: 0.4s;
-    transition: 0.4s;
-}
-
-input:checked + .slider {
-    background-color: var(--project-skill-background-color);
-}
-
-input:checked + .slider:before {
-    -webkit-transform: translateX(27px);
-    -ms-transform: translateX(27px);
-    transform: translateX(27px);
-}
-
-.slider.round,
-.slider:before {
-    border-radius: 40px;
-}
-
-#theme-setting {
-    position: absolute;
-    top: 25px;
-    right: 25px;
-}
-
-#theme-icon {
-    position: absolute;
-    font-size: 1rem;
-    right: 57px;
-    top: 1px;
-}
-
 #intro {
     background-color: var(--header-footer-background-color);
     padding-top: 125px;
@@ -149,13 +36,6 @@ input:checked + .slider:before {
 #intro-info {
     max-width: 800px;
     margin: 0 auto;
-}
-
-.head-shot {
-    border-radius: 100%;
-    margin-bottom: 2rem;
-    width: 175px;
-    border: 3px solid #fff;
 }
 
 .name {
@@ -290,55 +170,6 @@ input:checked + .slider:before {
     border-bottom: solid 3px var(--experience-list-highlight-color);
 }
 
-/* Projects Section */
-
-#search {
-    width: 90%;
-    padding: 10px;
-    border: var(--search-border);
-    margin: 0 auto;
-    margin-bottom: 80px;
-}
-
-.search-wrapper {
-    display: flex;
-    align-items: center;
-}
-
-.search-icon {
-    flex-grow: 1;
-    color: #555;
-    font-size: 1.25rem;
-    padding: 10px;
-    margin: 0 10px;
-}
-
-.search-skills {
-    flex-grow: 3;
-    width: 80%;
-    border: 0;
-    outline: none;
-    font-weight: 400;
-    font-size: 1.2rem;
-    color: var(--search-text-color);
-    background-color: #0000;
-}
-
-*::placeholder {
-    font-weight: 400;
-    font-size: 1.2rem;
-    color: #888;
-}
-
-.card {
-    border: none;
-    background-color: var(--card-background-color);
-}
-
-.card-img-top {
-    filter: var(--card-image-brightness);
-}
-
 .section-container-title {
     text-align: center;
     color: var(--default-text-color-secondary);
@@ -357,93 +188,4 @@ section {
     max-width: 1400px;
     padding-left: 60px;
     padding-right: 60px;
-}
-
-.project {
-    max-width: 350px;
-    margin: 0 auto;
-    text-align: left;
-    margin-bottom: 60px;
-}
-
-.project-name {
-    color: var(--text-title-color);
-    font-size: 1.25rem;
-    font-weight: 600;
-    margin-top: 1rem;
-}
-
-.project-type {
-    font-size: 1rem;
-    font-weight: 500;
-    color: var(--text-subtitle-color);
-}
-
-.project-detail {
-    margin: 16px auto;
-    font-size: 0.8rem;
-    font-weight: 400;
-    color: var(--text-description-color);
-}
-
-.project-skills {
-    margin-bottom: 12px;
-}
-
-.skill {
-    display: inline-block;
-    font-size: 0.8rem;
-    margin-bottom: 8px;
-    margin-right: 4px;
-    font-weight: 600;
-    padding: 2px 8px;
-    border: var(--project-skill-border);
-}
-
-.skill-normal {
-    color: var(--default-text-color-main);
-    background-color: var(--project-skill-background-color);
-}
-
-.skill-selected {
-    text-decoration: wavy;
-    color: var(--project-skill-selected-color);
-    box-shadow: var(--project-skill-selected-box-shadow);
-    background-color: var(--project-skill-selected-background-color);
-}
-
-.keyword-match {
-    color: var(--keyword-match-color);
-}
-
-.project-links {
-    margin-bottom: 12px;
-}
-
-.project-link-icon {
-    text-decoration: none;
-    color: var(--project-link-icon-color);
-    font-size: 10px;
-    margin: auto 8px;
-}
-
-.project-link-icon:hover {
-    text-decoration: none;
-    color: #666666;
-    margin: auto 8px;
-    transition: 0.2s;
-}
-
-/* Footer */
-
-#footer {
-    background-color: var(--header-footer-background-color);
-}
-
-.footer-text {
-    font-size: 1rem;
-    padding-top: 3rem;
-    padding-bottom: 3rem;
-    margin-bottom: 0;
-    color: var(--default-text-color-main);
 }

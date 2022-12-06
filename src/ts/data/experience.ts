@@ -6,13 +6,12 @@ export const experience: Experience[] = [
         },
         positions: [
             {
-                title: 'Open Source Contributor',
+                title: 'Maintainer',
                 description: [
-                    'Implemented configurable real-time daily leaderboards using Redis.',
-                    'Assisted in the development of a public API. Allowing users to access their data in third-party applications via generated API keys.',
+                    'Implemented configurable real-time leaderboards using Redis.',
+                    'Led the development of the <a class="link" href="https://api.monkeytype.com/docs/">public API</a>.',
                     'Overhauled and expanded the existing API to follow RESTful conventions.',
-                    'Improved web client build times by 10x by migrating from Browserify to Webpack.',
-                    'Setup a CI job on all pull requests using Github Actions to improve code stability.',
+                    'Setup a continuous integration pipeline using Github Actions.',
                     'Created and improved various features in the web client.',
                 ],
                 duration: {
@@ -29,7 +28,9 @@ export const experience: Experience[] = [
         positions: [
             {
                 title: 'Software Engineer',
-                description: [],
+                description: [
+                    'Building features for the <a class="link" href="https://blend.com/products/features/loan-officer-toolkit/">LO Toolkit</a>.',
+                ],
                 duration: {
                     startDate: 'July 2022',
                 },
@@ -37,8 +38,8 @@ export const experience: Experience[] = [
             {
                 title: 'Software Engineer Intern',
                 description: [
-                    "Assisted in the design and development of an API that would allow clients to update details of a borrower's loan product when changes are made in an external loan origination system.",
-                    "This API would further improve the ease of integration with Blend's mortgage platform, and provide a seamless experience for borrowers.",
+                    'Assisted with the design of a <a class="link" href="https://developers.blend.com/blend/reference/put-product-on-loan">public API endpoint</a> that allows clients to update loan product data when changes are made in an external loan origination system.',
+                    "This API expands integration capabilities with Blend's mortgage platform.",
                 ],
                 duration: {
                     startDate: 'May 2021',
