@@ -2,21 +2,10 @@
     --default-text-color-main: #d2d2d2;
     --default-text-color-secondary: #aaa;
 
-    --header-footer-background-color: #15161b;
+    --background-color: #15161b;
     --link-color-hover: #126fd3;
 
     --container-background-color: #191a1f;
-
-    --marker-color: #126fd3;
-
-    --text-title-color: #aaa;
-    --text-subtitle-color: #777;
-    --text-description-color: #999;
-
-    --experience-list-highlight-color: #126fd3;
-
-    --organization-icon-filter: brightness(100%);
-    --organization-unselected-color: #333;
 }
 
 body {
@@ -26,11 +15,12 @@ body {
     color: #fff;
 }
 
-/* Intro Section */
 #intro {
-    background-color: var(--header-footer-background-color);
-    padding-top: 125px;
-    padding-bottom: 85px;
+    background-color: var(--background-color);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 #intro-info {
@@ -74,6 +64,14 @@ body {
     color: #eee;
 }
 
+.link-highlight {
+    text-decoration: none;
+    font-weight: bold;
+    color: inherit;
+    padding-bottom: 0.1rem;
+    box-shadow: 0 3px 0 var(--link-color-hover);
+}
+
 .links .link {
     margin: 0.5rem;
 }
@@ -89,103 +87,4 @@ body {
     cursor: pointer;
     color: #eee;
     transition: 0.2s;
-}
-
-/* Experience Section */
-.panel {
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-#experience-positions {
-    text-align: left;
-}
-
-#experience-organization-filter {
-    overflow-x: auto;
-    color: var(--text-title-color);
-    display: flex;
-    margin-bottom: 30px;
-}
-
-#experience-organization-filter .experience-item:first-child {
-    margin-left: auto;
-}
-
-#experience-organization-filter .experience-item:last-child {
-    margin-right: auto;
-}
-
-.experience-position-description li::marker {
-    font-size: 1.25rem;
-    color: var(--marker-color);
-}
-
-.experience-position-title {
-    color: var(--text-title-color);
-    font-size: 1.25rem;
-    font-weight: 600;
-    margin-top: 1rem;
-}
-
-.experience-position-duration {
-    color: var(--text-subtitle-color);
-    font-size: 1rem;
-    font-weight: 500;
-}
-
-.experience-position-description {
-    color: var(--text-description-color);
-    font-size: 1rem;
-    font-weight: 400;
-    margin-top: 1rem;
-}
-
-.experience-position-description li {
-    margin-bottom: 0.5rem;
-}
-
-.experience-item {
-    cursor: pointer;
-    display: flex;
-    border-bottom: solid 3px var(--organization-unselected-color);
-    text-align: left;
-    padding: 1rem;
-}
-
-.organization-image-icon {
-    filter: var(--organization-icon-filter);
-    max-width: 2rem;
-    max-height: 2rem;
-    object-fit: contain;
-}
-
-.organization-name {
-    padding: 0 1rem;
-    max-height: 2rem;
-    align-self: center;
-}
-
-.experience-item.selected {
-    border-bottom: solid 3px var(--experience-list-highlight-color);
-}
-
-.section-container-title {
-    text-align: center;
-    color: var(--default-text-color-secondary);
-    font-weight: 600;
-    font-size: 1.85rem;
-    padding: 60px 0;
-}
-
-section {
-    background-color: var(--container-background-color);
-}
-
-.section-container {
-    padding-bottom: 63px;
-    margin: auto auto;
-    max-width: 1400px;
-    padding-left: 60px;
-    padding-right: 60px;
 }
