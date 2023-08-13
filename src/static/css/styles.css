@@ -8,15 +8,17 @@
     --container-background-color: #191a1f;
 }
 
+html,
 body {
     margin: 0;
     font-family: 'Montserrat', sans-serif;
     text-align: center;
     color: #fff;
+    -webkit-text-size-adjust: none;
+    background-color: var(--background-color);
 }
 
 #intro {
-    background-color: var(--background-color);
     height: 100vh;
     display: flex;
     justify-content: center;
@@ -32,8 +34,6 @@ body {
     color: var(--default-text-color-main);
     margin-top: 0;
     margin-bottom: 2rem;
-    padding-left: 12px;
-    padding-right: 12px;
     font-size: 2.25rem;
     font-weight: 600;
 }
@@ -50,11 +50,16 @@ body {
     align-items: center;
 }
 
-.link {
+.link,
+.link-highlight {
     text-decoration: none;
     font-weight: bold;
     color: inherit;
     padding-bottom: 0.1rem;
+    cursor: pointer;
+}
+
+.link {
     transition: box-shadow 80ms cubic-bezier(0.01, 0.88, 0.93, 0.07) 0s;
 }
 
@@ -65,15 +70,7 @@ body {
 }
 
 .link-highlight {
-    text-decoration: none;
-    font-weight: bold;
-    color: inherit;
-    padding-bottom: 0.1rem;
     box-shadow: 0 3px 0 var(--link-color-hover);
-}
-
-.links .link {
-    margin: 0.5rem;
 }
 
 .link-icon {
@@ -83,8 +80,6 @@ body {
 }
 
 .link-icon:hover {
-    text-decoration: none;
-    cursor: pointer;
     color: #eee;
     transition: 0.2s;
 }
