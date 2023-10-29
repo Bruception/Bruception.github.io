@@ -3,6 +3,7 @@ import tippy, { Props } from 'tippy.js';
 const tooltipProfiles: Record<string, Partial<Props>> = {
     default: {},
     exclusive: {
+        delay: 200,
         showOnCreate: true,
         placement: 'bottom',
     },
